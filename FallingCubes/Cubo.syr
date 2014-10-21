@@ -1,0 +1,464 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: Cubo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Cubo.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Cubo"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Cubo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Cubo.v" in library work
+Module <Cubo> compiled
+No errors in compilation
+Analysis of file <"Cubo.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Cubo> in library <work> with parameters.
+	CUBO_SIZE = "00000000000000000000000001000000"
+	E_EN_MOVIMIENTO = "00000000000000000000000000000001"
+	E_FINALIZADO_RECORRIDO = "00000000000000000000000000000010"
+	E_SIN_MOVIMIENTO = "00000000000000000000000000000000"
+	Max_X = "00000000000000000000001010000000"
+	Max_Y = "00000000000000000000000111100000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Cubo>.
+	CUBO_SIZE = 32'sb00000000000000000000000001000000
+	E_EN_MOVIMIENTO = 32'sb00000000000000000000000000000001
+	E_FINALIZADO_RECORRIDO = 32'sb00000000000000000000000000000010
+	E_SIN_MOVIMIENTO = 32'sb00000000000000000000000000000000
+	Max_X = 32'sb00000000000000000000001010000000
+	Max_Y = 32'sb00000000000000000000000111100000
+Module <Cubo> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <terminadoCubo> in unit <Cubo> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <Cubo>.
+    Related source file is "Cubo.v".
+    Found finite state machine <FSM_0> for signal <e_actual>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit register for signal <posicion_y_actual>.
+    Found 9-bit adder carry out for signal <pintar_cubo$addsub0001> created at line 97.
+    Found 10-bit comparator greatequal for signal <pintar_cubo$cmp_ge0000> created at line 97.
+    Found 11-bit comparator greatequal for signal <pintar_cubo$cmp_ge0001> created at line 97.
+    Found 10-bit comparator lessequal for signal <pintar_cubo$cmp_le0000> created at line 97.
+    Found 10-bit comparator lessequal for signal <pintar_cubo$cmp_le0001> created at line 97.
+    Found 11-bit subtractor for signal <pintar_cubo$sub0000> created at line 97.
+    Found 9-bit register for signal <posicion_x>.
+    Found 9-bit adder for signal <posicion_y_siguiente$addsub0000> created at line 75.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <Cubo> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 11-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+ 9-bit adder carry out                                 : 1
+# Registers                                            : 2
+ 9-bit register                                        : 2
+# Comparators                                          : 4
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <e_actual/FSM> on signal <e_actual[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 3
+ 11-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+ 9-bit adder carry out                                 : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Comparators                                          : 4
+ 10-bit comparator greatequal                          : 1
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Cubo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Cubo, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Cubo.ngr
+Top Level Output File Name         : Cubo
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 45
+
+Cell Usage :
+# BELS                             : 157
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 7
+#      LUT2                        : 38
+#      LUT3                        : 26
+#      LUT3_D                      : 1
+#      LUT4                        : 12
+#      LUT4_D                      : 1
+#      MULT_AND                    : 1
+#      MUXCY                       : 55
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 9
+# FlipFlops/Latches                : 20
+#      FDE                         : 9
+#      FDR                         : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 44
+#      IBUF                        : 33
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       46  out of   4656     0%  
+ Number of Slice Flip Flops:             20  out of   9312     0%  
+ Number of 4 input LUTs:                 89  out of   9312     0%  
+ Number of IOs:                          45
+ Number of bonded IOBs:                  45  out of    232    19%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 20    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.350ns (Maximum Frequency: 186.930MHz)
+   Minimum input arrival time before clock: 6.017ns
+   Maximum output required time after clock: 8.662ns
+   Maximum combinational path delay: 8.184ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.350ns (frequency: 186.930MHz)
+  Total number of paths / destination ports: 207 / 20
+-------------------------------------------------------------------------
+Delay:               5.350ns (Levels of Logic = 4)
+  Source:            posicion_y_actual_0 (FF)
+  Destination:       posicion_y_actual_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: posicion_y_actual_0 to posicion_y_actual_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.514   0.721  posicion_y_actual_0 (posicion_y_actual_0)
+     LUT4:I0->O            2   0.612   0.532  e_actual_cmp_eq000010 (e_actual_cmp_eq000010)
+     LUT4:I0->O            1   0.612   0.000  posicion_y_siguiente<0>1_wg_lut<5> (posicion_y_siguiente<0>1_wg_lut<5>)
+     MUXCY:S->O            9   0.752   0.727  posicion_y_siguiente<0>1_wg_cy<5> (posicion_y_siguiente<0>1_wg_cy<5>)
+     LUT3:I2->O            1   0.612   0.000  posicion_y_siguiente<8>1 (posicion_y_siguiente<8>)
+     FDR:D                     0.268          posicion_y_actual_8
+    ----------------------------------------
+    Total                      5.350ns (3.370ns logic, 1.980ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 290 / 39
+-------------------------------------------------------------------------
+Offset:              6.017ns (Levels of Logic = 6)
+  Source:            pixel_x<6> (PAD)
+  Destination:       posicion_y_actual_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: pixel_x<6> to posicion_y_actual_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.106   0.690  pixel_x_6_IBUF (pixel_x_6_IBUF)
+     LUT4:I0->O            1   0.612   0.000  e_actual_cmp_eq000027_SW1_F (N3)
+     MUXF5:I0->O           1   0.278   0.360  e_actual_cmp_eq000027_SW1 (N11)
+     LUT4:I3->O            1   0.612   0.000  posicion_y_siguiente<0>1_wg_lut<5> (posicion_y_siguiente<0>1_wg_lut<5>)
+     MUXCY:S->O            9   0.752   0.727  posicion_y_siguiente<0>1_wg_cy<5> (posicion_y_siguiente<0>1_wg_cy<5>)
+     LUT3:I2->O            1   0.612   0.000  posicion_y_siguiente<8>1 (posicion_y_siguiente<8>)
+     FDR:D                     0.268          posicion_y_actual_8
+    ----------------------------------------
+    Total                      6.017ns (4.240ns logic, 1.777ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 84 / 10
+-------------------------------------------------------------------------
+Offset:              8.662ns (Levels of Logic = 5)
+  Source:            posicion_x_6 (FF)
+  Destination:       pintar_cubo (PAD)
+  Source Clock:      clk rising
+
+  Data Path: posicion_x_6 to pintar_cubo
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.514   0.849  posicion_x_6 (posicion_x_6)
+     LUT2:I0->O            1   0.612   0.357  Madd_pintar_cubo_addsub0001_cy<7>11 (Madd_pintar_cubo_addsub0001_cy<7>)
+     MULT_AND:I1->LO       0   0.645   0.000  Madd_pintar_cubo_index0000_mand (Madd_pintar_cubo_index0000_mand1)
+     MUXCY:DI->O           1   1.121   0.426  Mcompar_pintar_cubo_cmp_le0000_cy<9> (pintar_cubo_cmp_le0000)
+     LUT4:I1->O            1   0.612   0.357  pintar_cubo1 (pintar_cubo_OBUF)
+     OBUF:I->O                 3.169          pintar_cubo_OBUF (pintar_cubo)
+    ----------------------------------------
+    Total                      8.662ns (6.673ns logic, 1.989ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 59 / 1
+-------------------------------------------------------------------------
+Delay:               8.184ns (Levels of Logic = 14)
+  Source:            pixel_x<0> (PAD)
+  Destination:       pintar_cubo (PAD)
+
+  Data Path: pixel_x<0> to pintar_cubo
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.106   0.603  pixel_x_0_IBUF (pixel_x_0_IBUF)
+     LUT2:I0->O            1   0.612   0.000  Mcompar_pintar_cubo_cmp_ge0000_lut<0> (Mcompar_pintar_cubo_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<0> (Mcompar_pintar_cubo_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<1> (Mcompar_pintar_cubo_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<2> (Mcompar_pintar_cubo_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<3> (Mcompar_pintar_cubo_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<4> (Mcompar_pintar_cubo_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<5> (Mcompar_pintar_cubo_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<6> (Mcompar_pintar_cubo_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<7> (Mcompar_pintar_cubo_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_pintar_cubo_cmp_ge0000_cy<8> (Mcompar_pintar_cubo_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.399   0.509  Mcompar_pintar_cubo_cmp_ge0000_cy<9> (pintar_cubo_cmp_ge0000)
+     LUT4:I0->O            1   0.612   0.357  pintar_cubo1 (pintar_cubo_OBUF)
+     OBUF:I->O                 3.169          pintar_cubo_OBUF (pintar_cubo)
+    ----------------------------------------
+    Total                      8.184ns (6.715ns logic, 1.469ns route)
+                                       (82.0% logic, 18.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.35 secs
+ 
+--> 
+
+Total memory usage is 245060 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
