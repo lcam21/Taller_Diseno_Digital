@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-10-21T15:59:43</DateModified>
+  <DateModified>2014-10-21T17:38:35</DateModified>
   <ModuleName>Cubo</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Luis/Desktop/ProyectosX/FallingCubes/iseconfig/Cubo.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Luis/Desktop/ProyectosX/FallingCubes</ImplementationReportsDirectory>
+  <SavedFilePath>D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/iseconfig/Cubo.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes\</ImplementationReportsDirectory>
   <DateInitialized>2014-10-21T15:40:11</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
