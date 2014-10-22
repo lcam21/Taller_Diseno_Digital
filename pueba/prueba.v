@@ -48,7 +48,7 @@ module Cubo(
 					posicion_y_actual <= posicion_y_siguiente;
 				end
 		end
-
+////
 	always @(*)
 		begin
 			e_siguiente = e_actual;
