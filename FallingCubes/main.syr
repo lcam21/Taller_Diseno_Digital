@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.41 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.41 secs
  
 --> Reading design: main.prj
 
@@ -105,13 +105,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" into library work
+Analyzing Verilog file "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" into library work
 Parsing module <vga_sync>.
-Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\MUX_RGB.v" into library work
+Analyzing Verilog file "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\MUX_RGB.v" into library work
 Parsing module <MUX_RGB>.
-Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\Cubo.v" into library work
+Analyzing Verilog file "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\Cubo.v" into library work
 Parsing module <Cubo>.
-Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" into library work
+Analyzing Verilog file "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" into library work
 Parsing module <main>.
 
 =========================================================================
@@ -121,8 +121,8 @@ Parsing module <main>.
 Elaborating module <main>.
 
 Elaborating module <vga_sync>.
-WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 69: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 79: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 69: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 79: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 Elaborating module <Cubo>.
 
@@ -133,16 +133,16 @@ Elaborating module <MUX_RGB>.
 =========================================================================
 
 Synthesizing Unit <main>.
-    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.v".
-INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" line 26: Output port <p_tick> of the instance <controlador_vga> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" line 38: Output port <posicion_y_actual> of the instance <cubo_prueba> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" line 38: Output port <terminadoCubo> of the instance <cubo_prueba> is unconnected or connected to loadless signal.
+    Related source file is "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\main.v".
+INFO:Xst:3210 - "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" line 26: Output port <p_tick> of the instance <controlador_vga> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" line 38: Output port <posicion_y_actual> of the instance <cubo_prueba> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\main.v" line 38: Output port <terminadoCubo> of the instance <cubo_prueba> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <main> synthesized.
 
 Synthesizing Unit <vga_sync>.
-    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v".
+    Related source file is "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v".
     Found 10-bit register for signal <v_count_reg>.
     Found 10-bit register for signal <h_count_reg>.
     Found 1-bit register for signal <v_sync_reg>.
@@ -164,7 +164,7 @@ Synthesizing Unit <vga_sync>.
 Unit <vga_sync> synthesized.
 
 Synthesizing Unit <Cubo>.
-    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\Cubo.v".
+    Related source file is "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\Cubo.v".
     Found 2-bit register for signal <e_actual>.
     Found 9-bit register for signal <posicion_x>.
     Found 2-bit register for signal <velocidad_cubo>.
@@ -198,7 +198,7 @@ Synthesizing Unit <Cubo>.
 Unit <Cubo> synthesized.
 
 Synthesizing Unit <MUX_RGB>.
-    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\MUX_RGB.v".
+    Related source file is "D:\Mis Documentos\GitHub\Taller_Diseno_Digital\FallingCubes\MUX_RGB.v".
     Found 8-bit register for signal <RGB_temporal>.
     Summary:
 	inferred   8 D-type flip-flop(s).
@@ -505,12 +505,12 @@ clk            |    4.717|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.55 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.49 secs
  
 --> 
 
-Total memory usage is 254364 kilobytes
+Total memory usage is 221684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   13 (   0 filtered)

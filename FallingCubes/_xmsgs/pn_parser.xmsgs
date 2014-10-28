@@ -8,19 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/Cubo.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/LFSR.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/MUX_RGB.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/main.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/vga_sync.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/canasta.v&quot; into library work</arg>
 </msg>
 
 </messages>
