@@ -22,3 +22,7 @@ xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCu
 xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
 xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
 xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
+xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
+xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
+xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
+xst -intstyle ise -ifn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.xst" -ofn "D:/Mis Documentos/GitHub/Taller_Diseno_Digital/FallingCubes/Canasta.syr" 
