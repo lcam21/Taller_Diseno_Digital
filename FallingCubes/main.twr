@@ -36,8 +36,8 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-reset       |    2.981(R)|      SLOW  |   -0.832(R)|      FAST  |clk_BUFGP         |   0.000|
-start       |    2.302(R)|      SLOW  |   -1.148(R)|      FAST  |clk_BUFGP         |   0.000|
+reset       |    5.366(R)|      SLOW  |   -0.864(R)|      FAST  |clk_BUFGP         |   0.000|
+start       |    2.501(R)|      SLOW  |   -1.034(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -45,16 +45,16 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-hsync       |         8.169(R)|      SLOW  |         4.324(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<0>      |         8.151(R)|      SLOW  |         4.332(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<1>      |         8.318(R)|      SLOW  |         4.461(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<2>      |         8.313(R)|      SLOW  |         4.418(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<3>      |         7.024(R)|      SLOW  |         3.604(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<4>      |         7.527(R)|      SLOW  |         3.929(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<5>      |         7.505(R)|      SLOW  |         3.904(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<6>      |         8.558(R)|      SLOW  |         4.543(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<7>      |         8.725(R)|      SLOW  |         4.672(R)|      FAST  |clk_BUFGP         |   0.000|
-vsync       |         8.201(R)|      SLOW  |         4.351(R)|      FAST  |clk_BUFGP         |   0.000|
+hsync       |         8.196(R)|      SLOW  |         4.354(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<0>      |         8.351(R)|      SLOW  |         4.456(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<1>      |         8.518(R)|      SLOW  |         4.585(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<2>      |         8.514(R)|      SLOW  |         4.543(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<3>      |         7.004(R)|      SLOW  |         3.592(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<4>      |         7.195(R)|      SLOW  |         3.757(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<5>      |         7.362(R)|      SLOW  |         3.886(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<6>      |         8.759(R)|      SLOW  |         4.668(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<7>      |         8.926(R)|      SLOW  |         4.797(R)|      FAST  |clk_BUFGP         |   0.000|
+vsync       |         8.226(R)|      SLOW  |         4.361(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -62,18 +62,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.107|         |         |         |
+clk            |    3.813|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Oct 28 10:58:45 2014 
+Analysis completed Tue Oct 28 13:55:22 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 215 MB
+Peak Memory Usage: 219 MB
 
 
 

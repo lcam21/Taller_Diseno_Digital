@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
 
@@ -121,8 +121,9 @@ Parsing module <main>.
 Elaborating module <main>.
 
 Elaborating module <vga_sync>.
-WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 69: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 79: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 50: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 73: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 Elaborating module <Cubo>.
 
@@ -143,24 +144,25 @@ Unit <main> synthesized.
 
 Synthesizing Unit <vga_sync>.
     Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\vga_sync.v".
+    Found 1-bit register for signal <bandera_cambiar_pulso>.
     Found 10-bit register for signal <v_count_reg>.
     Found 10-bit register for signal <h_count_reg>.
     Found 1-bit register for signal <v_sync_reg>.
     Found 1-bit register for signal <h_sync_reg>.
     Found 1-bit register for signal <mod2_reg>.
-    Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_4_OUT> created at line 69.
-    Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_7_OUT> created at line 79.
-    Found 10-bit comparator lessequal for signal <n0015> created at line 86
-    Found 10-bit comparator lessequal for signal <n0017> created at line 86
-    Found 10-bit comparator lessequal for signal <n0020> created at line 88
-    Found 10-bit comparator lessequal for signal <n0022> created at line 88
-    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_2_o_LessThan_15_o> created at line 91
-    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_2_o_LessThan_16_o> created at line 91
+    Found 1-bit adder for signal <bandera_cambiar_pulso_PWR_2_o_add_1_OUT<0>> created at line 50.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_2_o_add_10_OUT> created at line 73.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_2_o_add_14_OUT> created at line 83.
+    Found 10-bit comparator lessequal for signal <n0026> created at line 90
+    Found 10-bit comparator lessequal for signal <n0028> created at line 90
+    Found 10-bit comparator lessequal for signal <n0031> created at line 92
+    Found 10-bit comparator lessequal for signal <n0033> created at line 92
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_2_o_LessThan_22_o> created at line 95
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_2_o_LessThan_23_o> created at line 95
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  23 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
 	inferred   6 Comparator(s).
-	inferred   2 Multiplexer(s).
 Unit <vga_sync> synthesized.
 
 Synthesizing Unit <Cubo>.
@@ -208,12 +210,13 @@ Unit <MUX_RGB> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 5
+# Adders/Subtractors                                   : 6
+ 1-bit adder                                           : 1
  10-bit adder                                          : 3
  10-bit subtractor                                     : 1
  9-bit adder                                           : 1
-# Registers                                            : 9
- 1-bit register                                        : 3
+# Registers                                            : 10
+ 1-bit register                                        : 4
  10-bit register                                       : 2
  2-bit register                                        : 1
  8-bit register                                        : 1
@@ -222,8 +225,7 @@ Macro Statistics
  10-bit comparator greater                             : 2
  10-bit comparator lessequal                           : 7
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 3
- 10-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 1
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
@@ -245,6 +247,7 @@ The following registers are absorbed into accumulator <posicion_y_actual>: 1 reg
 Unit <Cubo> synthesized (advanced).
 
 Synthesizing (advanced) Unit <vga_sync>.
+The following registers are absorbed into counter <bandera_cambiar_pulso>: 1 register on signal <bandera_cambiar_pulso>.
 The following registers are absorbed into counter <v_count_reg>: 1 register on signal <v_count_reg>.
 The following registers are absorbed into counter <h_count_reg>: 1 register on signal <h_count_reg>.
 Unit <vga_sync> synthesized (advanced).
@@ -256,7 +259,8 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 1
  10-bit subtractor                                     : 1
-# Counters                                             : 2
+# Counters                                             : 3
+ 1-bit up counter                                      : 1
  10-bit up counter                                     : 2
 # Accumulators                                         : 1
  9-bit up loadable accumulator                         : 1
@@ -310,8 +314,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 36
- Flip-Flops                                            : 36
+# Registers                                            : 37
+ Flip-Flops                                            : 37
 
 =========================================================================
 
@@ -334,25 +338,23 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 143
+# BELS                             : 150
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 2
-#      LUT2                        : 1
-#      LUT3                        : 27
-#      LUT4                        : 22
-#      LUT5                        : 10
-#      LUT6                        : 27
+#      INV                         : 6
+#      LUT1                        : 18
+#      LUT2                        : 4
+#      LUT3                        : 13
+#      LUT4                        : 32
+#      LUT5                        : 9
+#      LUT6                        : 17
 #      MUXCY                       : 29
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 36
-#      FD                          : 1
-#      FDC                         : 3
-#      FDCE                        : 20
+# FlipFlops/Latches                : 37
+#      FD                          : 11
 #      FDE                         : 1
-#      FDR                         : 3
-#      FDRE                        : 8
+#      FDR                         : 6
+#      FDRE                        : 19
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 12
@@ -366,16 +368,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              36  out of  18224     0%  
- Number of Slice LUTs:                   92  out of   9112     1%  
-    Number used as Logic:                92  out of   9112     1%  
+ Number of Slice Registers:              37  out of  18224     0%  
+ Number of Slice LUTs:                   99  out of   9112     1%  
+    Number used as Logic:                99  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     94
-   Number with an unused Flip Flop:      58  out of     94    61%  
-   Number with an unused LUT:             2  out of     94     2%  
-   Number of fully used LUT-FF pairs:    34  out of     94    36%  
-   Number of unique control sets:         9
+ Number of LUT Flip Flop pairs used:    101
+   Number with an unused Flip Flop:      64  out of    101    63%  
+   Number with an unused LUT:             2  out of    101     1%  
+   Number of fully used LUT-FF pairs:    35  out of    101    34%  
+   Number of unique control sets:        10
 
 IO Utilization: 
  Number of IOs:                          13
@@ -405,7 +407,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 36    |
+clk                                | BUFGP                  | 37    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -416,8 +418,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.717ns (Maximum Frequency: 211.995MHz)
-   Minimum input arrival time before clock: 3.078ns
+   Minimum period: 4.822ns (Maximum Frequency: 207.394MHz)
+   Minimum input arrival time before clock: 4.452ns
    Maximum output required time after clock: 3.732ns
    Maximum combinational path delay: No path found
 
@@ -427,48 +429,49 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.717ns (frequency: 211.995MHz)
-  Total number of paths / destination ports: 1820 / 66
+  Clock period: 4.822ns (frequency: 207.394MHz)
+  Total number of paths / destination ports: 1136 / 70
 -------------------------------------------------------------------------
-Delay:               4.717ns (Levels of Logic = 4)
-  Source:            cubo_prueba/posicion_y_actual_4 (FF)
-  Destination:       cubo_prueba/posicion_y_actual_5 (FF)
+Delay:               4.822ns (Levels of Logic = 4)
+  Source:            controlador_vga/mod2_reg (FF)
+  Destination:       controlador_vga/v_count_reg_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: cubo_prueba/posicion_y_actual_4 to cubo_prueba/posicion_y_actual_5
+  Data Path: controlador_vga/mod2_reg to controlador_vga/v_count_reg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             8   0.447   1.031  cubo_prueba/posicion_y_actual_4 (cubo_prueba/posicion_y_actual_4)
-     LUT3:I0->O            2   0.205   0.617  cubo_prueba/GND_3_o_GND_3_o_equal_16_o<8>_SW0 (N6)
-     LUT6:I5->O           11   0.205   0.987  cubo_prueba/GND_3_o_GND_3_o_equal_16_o<8> (cubo_prueba/GND_3_o_GND_3_o_equal_16_o)
-     LUT5:I3->O            5   0.203   0.715  cubo_prueba/_n0136_inv5_rstpot (cubo_prueba/_n0136_inv5_rstpot)
-     LUT3:I2->O            1   0.205   0.000  cubo_prueba/posicion_y_actual_1_dpot (cubo_prueba/posicion_y_actual_1_dpot)
-     FDRE:D                    0.102          cubo_prueba/posicion_y_actual_1
+     FDRE:C->Q             3   0.447   0.995  controlador_vga/mod2_reg (controlador_vga/mod2_reg)
+     LUT5:I0->O            2   0.203   0.721  controlador_vga/Mcount_v_count_reg_val12 (controlador_vga/Mcount_v_count_reg_val12)
+     LUT4:I2->O           11   0.203   0.883  controlador_vga/Mcount_v_count_reg_val13 (controlador_vga/Mcount_v_count_reg_val1)
+     LUT6:I5->O           10   0.205   0.857  controlador_vga/Mcount_v_count_reg_val (controlador_vga/Mcount_v_count_reg_val)
+     LUT4:I3->O            1   0.205   0.000  controlador_vga/v_count_reg_0_rstpot (controlador_vga/v_count_reg_0_rstpot)
+     FD:D                      0.102          controlador_vga/v_count_reg_0
     ----------------------------------------
-    Total                      4.717ns (1.367ns logic, 3.350ns route)
-                                       (29.0% logic, 71.0% route)
+    Total                      4.822ns (1.365ns logic, 3.457ns route)
+                                       (28.3% logic, 71.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 36 / 35
+  Total number of paths / destination ports: 37 / 36
 -------------------------------------------------------------------------
-Offset:              3.078ns (Levels of Logic = 2)
+Offset:              4.452ns (Levels of Logic = 3)
   Source:            reset (PAD)
-  Destination:       cubo_prueba/posicion_x_1 (FF)
+  Destination:       controlador_vga/v_sync_reg (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to cubo_prueba/posicion_x_1
+  Data Path: reset to controlador_vga/v_sync_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            34   1.222   1.549  reset_IBUF (reset_IBUF)
-     LUT5:I2->O            1   0.205   0.000  cubo_prueba/posicion_x_1_dpot (cubo_prueba/posicion_x_1_dpot)
-     FDE:D                     0.102          cubo_prueba/posicion_x_1
+     IBUF:I->O            17   1.222   1.132  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            1   0.203   0.684  controlador_vga/PWR_2_o_v_count_reg[9]_LessThan_20_o_SW0 (N4)
+     LUT6:I4->O            1   0.203   0.579  controlador_vga/PWR_2_o_v_count_reg[9]_LessThan_20_o (controlador_vga/PWR_2_o_v_count_reg[9]_LessThan_20_o_0)
+     FDR:R                     0.430          controlador_vga/v_sync_reg
     ----------------------------------------
-    Total                      3.078ns (1.529ns logic, 1.549ns route)
-                                       (49.7% logic, 50.3% route)
+    Total                      4.452ns (2.058ns logic, 2.395ns route)
+                                       (46.2% logic, 53.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -499,20 +502,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.717|         |         |         |
+clk            |    4.822|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.55 secs
+Total CPU time to Xst completion: 8.59 secs
  
 --> 
 
-Total memory usage is 254364 kilobytes
+Total memory usage is 257824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
 Number of infos    :    9 (   0 filtered)
 

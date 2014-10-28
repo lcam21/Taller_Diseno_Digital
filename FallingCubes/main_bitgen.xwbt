@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.ncd
+OUTFILE=C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes\main.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\FallingCubes
+LICENSE=WebPack
+USER_INFO=210920558_0_0_905

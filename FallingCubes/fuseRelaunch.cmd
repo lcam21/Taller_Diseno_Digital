@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/vga_sync_TEST_isim_beh.exe" -prj "C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/FallingCubes/vga_sync_TEST_beh.prj" "work.vga_sync_TEST" "work.glbl" 
