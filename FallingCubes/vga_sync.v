@@ -29,13 +29,16 @@ module vga_sync
 	wire v_sync_next, h_sync_next ;
 	// status signal
 	wire h_end, v_end, pixel_tick ;
+	
+	reg bandera_cambiar_pulso;
 
 	// body
 	// registers
-	always @(posedge clk, posedge reset)
+	always @(posedge clk)//, posedge reset)
 		if (reset)
 			begin
 				mod2_reg <= 1'b0;
+				bandera_cambiar_pulso <= 1'b0;
 				v_count_reg <= 0;
 				h_count_reg <= 0;
 				v_sync_reg  <= 1'b0;
@@ -44,6 +47,7 @@ module vga_sync
 		else
 			begin
 				mod2_reg <= mod2_next;
+				bandera_cambiar_pulso <= bandera_cambiar_pulso + 1;
 				v_count_reg <= v_count_next ;
 				h_count_reg <= h_count_next ;
 				v_sync_reg  <= v_sync_next ;
@@ -51,7 +55,7 @@ module vga_sync
 			end
 
 	// mod-2 circuit to generate 25 MHz enable tick
-	assign mod2_next = ~(mod2_reg);// ? 1'b0 : 1'b1;
+	assign mod2_next = bandera_cambiar_pulso == 1'b1 ? ~(mod2_reg) : mod2_reg	;// ? 1'b0 : 1'b1;
 	assign pixel_tick = mod2_reg;
 	
 	//status signals
@@ -62,7 +66,7 @@ module vga_sync
 
 	// next-state logic of mod-800 horizontal sync counter
 	always @*
-		if(pixel_tick) // 25 MHz pulse
+		if(pixel_tick && bandera_cambiar_pulso == 1'b1) // 25 MHz pulse
 			if (h_end)
 				h_count_next = 0;
 			else
@@ -72,7 +76,7 @@ module vga_sync
 
 	// next-state logic of mod-525 vertical sync counter
 	always @*
-		if (pixel_tick & h_end)
+		if (pixel_tick &&bandera_cambiar_pulso == 1'b1 && h_end)
 			if (v_end)
 				v_count_next = 0;
 			else
