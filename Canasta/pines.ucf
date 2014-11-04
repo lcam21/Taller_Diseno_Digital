@@ -1,0 +1,38 @@
+
+
+NET "clk"         LOC = "V10";
+NET "reset"         LOC = "B8";
+NET "start"         LOC = "A8"; 
+
+
+# VGA Connector
+NET "rgb<0>"      LOC = "U7";
+NET "rgb<1>"      LOC = "V7";
+NET "rgb<2>"      LOC = "N7";
+NET "rgb<3>"    	LOC = "P8";
+NET "rgb<4>"    	LOC = "T6";
+NET "rgb<5>"    	LOC = "V6";
+NET "rgb<6>"     	LOC = "R7";
+NET "rgb<7>"    	LOC = "T7";
+
+NET "hsync"       LOC = "N6";
+NET "vsync"       LOC = "P7";
+
+## Usb-RS232 interface
+Net "rx" LOC = N17 | IOSTANDARD=LVCMOS33; #Bank = 1, pin name = IO_L48P_HDC_M1DQ8, Sch name = MCU-RX
+#Net "TxD" LOC = N18 | IOSTANDARD=LVCMOS33; #Bank = 1, pin name = IO_L48N_M1DQ9, Sch name = MCU-TX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

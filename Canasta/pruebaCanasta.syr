@@ -1,0 +1,594 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: pruebaCanasta.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pruebaCanasta.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pruebaCanasta"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : pruebaCanasta
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" into library work
+Parsing module <vga_sync>.
+Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" into library work
+Parsing module <UART>.
+Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\MUX_RGB.v" into library work
+Parsing module <MUX_RGB>.
+Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\Convertidor.v" into library work
+Parsing module <Convertidor>.
+Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\Canasta.v" into library work
+Parsing module <Canasta>.
+Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\pruebaCanasta.v" into library work
+Parsing module <pruebaCanasta>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pruebaCanasta>.
+
+Elaborating module <Canasta>.
+
+Elaborating module <vga_sync>.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" Line 50: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" Line 73: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <MUX_RGB>.
+
+Elaborating module <UART>.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 66: Result of 32-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 69: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 109: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 110: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 118: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 124: Result of 32-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <Convertidor>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pruebaCanasta>.
+    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\pruebaCanasta.v".
+INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\pruebaCanasta.v" line 45: Output port <p_tick> of the instance <vga> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\pruebaCanasta.v" line 64: Output port <received> of the instance <UART> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\pruebaCanasta.v" line 64: Output port <is_receiving> of the instance <UART> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\pruebaCanasta.v" line 64: Output port <recv_error> of the instance <UART> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <pruebaCanasta> synthesized.
+
+Synthesizing Unit <Canasta>.
+    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\Canasta.v".
+    Found 10-bit register for signal <pos_x_actual>.
+    Found 2-bit register for signal <E_ACTUAL>.
+    Found finite state machine <FSM_0> for signal <E_ACTUAL>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <pos_x_actual[9]_GND_2_o_sub_10_OUT> created at line 72.
+    Found 11-bit adder for signal <n0060> created at line 82.
+    Found 10-bit adder for signal <pos_x_actual[9]_GND_2_o_add_18_OUT> created at line 83.
+    Found 10-bit comparator greater for signal <pos_x_mano[9]_pos_x_actual[9]_LessThan_15_o> created at line 79
+    Found 10-bit comparator greater for signal <pos_x_actual[9]_pos_x_mano[9]_LessThan_16_o> created at line 82
+    Found 11-bit comparator greater for signal <BUS_0002_GND_2_o_LessThan_18_o> created at line 82
+    Found 10-bit comparator lessequal for signal <n0027> created at line 109
+    Found 11-bit comparator lessequal for signal <n0029> created at line 110
+    Found 10-bit comparator lessequal for signal <n0032> created at line 111
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_2_o_LessThan_38_o> created at line 111
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred   1 Finite State Machine(s).
+Unit <Canasta> synthesized.
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v".
+    Found 1-bit register for signal <bandera_cambiar_pulso>.
+    Found 10-bit register for signal <v_count_reg>.
+    Found 10-bit register for signal <h_count_reg>.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 1-bit register for signal <mod2_reg>.
+    Found 1-bit adder for signal <bandera_cambiar_pulso_PWR_4_o_add_1_OUT<0>> created at line 50.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_3_o_add_10_OUT> created at line 73.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_3_o_add_14_OUT> created at line 83.
+    Found 10-bit comparator lessequal for signal <n0026> created at line 90
+    Found 10-bit comparator lessequal for signal <n0028> created at line 90
+    Found 10-bit comparator lessequal for signal <n0031> created at line 92
+    Found 10-bit comparator lessequal for signal <n0033> created at line 92
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_4_o_LessThan_22_o> created at line 95
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_3_o_LessThan_23_o> created at line 95
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <vga_sync> synthesized.
+
+Synthesizing Unit <MUX_RGB>.
+    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\MUX_RGB.v".
+    Found 8-bit register for signal <RGB_temporal>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <MUX_RGB> synthesized.
+
+Synthesizing Unit <UART>.
+    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v".
+        CLOCK_DIVIDE = 2604
+        RX_IDLE = 0
+        RX_CHECK_START = 1
+        RX_READ_BITS = 2
+        RX_CHECK_STOP = 3
+        RX_DELAY_RESTART = 4
+        RX_ERROR = 5
+        RX_RECEIVED = 6
+    Found 13-bit register for signal <rx_clk_divider>.
+    Found 6-bit register for signal <rx_countdown>.
+    Found 8-bit register for signal <rx_data>.
+    Found 4-bit register for signal <rx_bits_remaining>.
+    Found 3-bit register for signal <recv_state>.
+    Found 13-bit subtractor for signal <GND_5_o_GND_5_o_sub_7_OUT<12:0>> created at line 66.
+    Found 6-bit subtractor for signal <GND_5_o_GND_5_o_sub_9_OUT<5:0>> created at line 69.
+    Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_23_OUT<3:0>> created at line 109.
+    Found 3-bit 8-to-1 multiplexer for signal <recv_state[2]_recv_state[2]_wide_mux_34_OUT> created at line 73.
+    Found 6-bit 7-to-1 multiplexer for signal <recv_state[2]_rx_countdown[5]_wide_mux_35_OUT> created at line 73.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <UART> synthesized.
+
+Synthesizing Unit <Convertidor>.
+    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\Convertidor.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8x3-bit multiplier for signal <n0002> created at line 28.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <Convertidor> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 8
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 2
+ 10-bit addsub                                         : 1
+ 11-bit adder                                          : 1
+ 13-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 13
+ 1-bit register                                        : 4
+ 10-bit register                                       : 3
+ 13-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 13
+ 10-bit comparator greater                             : 5
+ 10-bit comparator lessequal                           : 6
+ 11-bit comparator greater                             : 1
+ 11-bit comparator lessequal                           : 1
+# Multiplexers                                         : 18
+ 10-bit 2-to-1 multiplexer                             : 2
+ 13-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 5
+ 6-bit 7-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <RGB_temporal_3> in Unit <colores> is equivalent to the following 2 FFs/Latches, which will be removed : <RGB_temporal_4> <RGB_temporal_5> 
+INFO:Xst:2261 - The FF/Latch <RGB_temporal_0> in Unit <colores> is equivalent to the following 4 FFs/Latches, which will be removed : <RGB_temporal_1> <RGB_temporal_2> <RGB_temporal_6> <RGB_temporal_7> 
+
+Synthesizing (advanced) Unit <Canasta>.
+The following registers are absorbed into counter <pos_x_actual>: 1 register on signal <pos_x_actual>.
+Unit <Canasta> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_sync>.
+The following registers are absorbed into counter <bandera_cambiar_pulso>: 1 register on signal <bandera_cambiar_pulso>.
+The following registers are absorbed into counter <v_count_reg>: 1 register on signal <v_count_reg>.
+The following registers are absorbed into counter <h_count_reg>: 1 register on signal <h_count_reg>.
+Unit <vga_sync> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 4
+ 11-bit adder                                          : 1
+ 13-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 1
+# Counters                                             : 4
+ 1-bit up counter                                      : 1
+ 10-bit up counter                                     : 2
+ 10-bit updown counter                                 : 1
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+# Comparators                                          : 13
+ 10-bit comparator greater                             : 5
+ 10-bit comparator lessequal                           : 6
+ 11-bit comparator greater                             : 1
+ 11-bit comparator lessequal                           : 1
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 6
+ 13-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 4
+ 6-bit 7-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <RGB_temporal_3> in Unit <MUX_RGB> is equivalent to the following 2 FFs/Latches, which will be removed : <RGB_temporal_4> <RGB_temporal_5> 
+INFO:Xst:2261 - The FF/Latch <RGB_temporal_0> in Unit <MUX_RGB> is equivalent to the following 4 FFs/Latches, which will be removed : <RGB_temporal_1> <RGB_temporal_2> <RGB_temporal_6> <RGB_temporal_7> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <canasta/FSM_0> on signal <E_ACTUAL[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 10    | 10
+ 01    | 01
+-------------------
+
+Optimizing unit <pruebaCanasta> ...
+
+Optimizing unit <Canasta> ...
+
+Optimizing unit <vga_sync> ...
+
+Optimizing unit <UART> ...
+WARNING:Xst:1293 - FF/Latch <UART/rx_clk_divider_12> has a constant value of 0 in block <pruebaCanasta>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pruebaCanasta, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 71
+ Flip-Flops                                            : 71
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pruebaCanasta.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 358
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 3
+#      LUT2                        : 17
+#      LUT3                        : 27
+#      LUT4                        : 57
+#      LUT5                        : 41
+#      LUT6                        : 92
+#      MUXCY                       : 59
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 43
+# FlipFlops/Latches                : 71
+#      FD                          : 30
+#      FDE                         : 4
+#      FDR                         : 6
+#      FDRE                        : 29
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 2
+#      OBUF                        : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              71  out of  18224     0%  
+ Number of Slice LUTs:                  252  out of   9112     2%  
+    Number used as Logic:               252  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    253
+   Number with an unused Flip Flop:     182  out of    253    71%  
+   Number with an unused LUT:             1  out of    253     0%  
+   Number of fully used LUT-FF pairs:    70  out of    253    27%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 71    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.916ns (Maximum Frequency: 169.030MHz)
+   Minimum input arrival time before clock: 5.951ns
+   Maximum output required time after clock: 4.110ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.916ns (frequency: 169.030MHz)
+  Total number of paths / destination ports: 9401 / 109
+-------------------------------------------------------------------------
+Delay:               5.916ns (Levels of Logic = 7)
+  Source:            UART/rx_clk_divider_0 (FF)
+  Destination:       UART/rx_bits_remaining_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: UART/rx_clk_divider_0 to UART/rx_bits_remaining_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.580  UART/rx_clk_divider_0 (UART/rx_clk_divider_0)
+     LUT1:I0->O            1   0.205   0.000  UART/Msub_GND_5_o_GND_5_o_sub_7_OUT<12:0>_cy<0>_rt (UART/Msub_GND_5_o_GND_5_o_sub_7_OUT<12:0>_cy<0>_rt)
+     MUXCY:S->O            1   0.172   0.000  UART/Msub_GND_5_o_GND_5_o_sub_7_OUT<12:0>_cy<0> (UART/Msub_GND_5_o_GND_5_o_sub_7_OUT<12:0>_cy<0>)
+     XORCY:CI->O           3   0.180   0.995  UART/Msub_GND_5_o_GND_5_o_sub_7_OUT<12:0>_xor<1> (UART/GND_5_o_GND_5_o_sub_7_OUT<1>)
+     LUT6:I1->O            4   0.203   0.684  UART/Mmux_recv_state[2]_GND_5_o_wide_mux_38_OUT71_SW0 (N16)
+     LUT6:I5->O           18   0.205   1.050  UART/Mmux_recv_state[2]_GND_5_o_wide_mux_38_OUT71 (UART/Mmux_recv_state[2]_GND_5_o_wide_mux_38_OUT71)
+     LUT6:I5->O            4   0.205   0.684  UART/Mmux_recv_state[2]_recv_state[2]_wide_mux_34_OUT131_cepot_rstpot (UART/Mmux_recv_state[2]_recv_state[2]_wide_mux_34_OUT131_cepot_rstpot)
+     LUT3:I2->O            1   0.205   0.000  UART/rx_bits_remaining_0_dpot (UART/rx_bits_remaining_0_dpot)
+     FDE:D                     0.102          UART/rx_bits_remaining_0
+    ----------------------------------------
+    Total                      5.916ns (1.924ns logic, 3.992ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 109 / 69
+-------------------------------------------------------------------------
+Offset:              5.951ns (Levels of Logic = 5)
+  Source:            reset (PAD)
+  Destination:       UART/rx_data_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to UART/rx_data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   1.222   1.744  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            8   0.203   0.803  UART/_n0109_inv1_SW0 (N76)
+     LUT6:I5->O            1   0.205   0.580  UART/n0022_SW7_F (N137)
+     LUT5:I4->O            1   0.205   0.684  UART/n0022_SW71 (N107)
+     LUT6:I4->O            1   0.203   0.000  UART/rx_data_7_rstpot (UART/rx_data_7_rstpot)
+     FD:D                      0.102          UART/rx_data_7
+    ----------------------------------------
+    Total                      5.951ns (2.140ns logic, 3.811ns route)
+                                       (36.0% logic, 64.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              4.110ns (Levels of Logic = 1)
+  Source:            canasta/pos_x_actual_4 (FF)
+  Destination:       pos_x_actual<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: canasta/pos_x_actual_4 to pos_x_actual<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            20   0.447   1.092  canasta/pos_x_actual_4 (canasta/pos_x_actual_4)
+     OBUF:I->O                 2.571          pos_x_actual_4_OBUF (pos_x_actual<4>)
+    ----------------------------------------
+    Total                      4.110ns (3.018ns logic, 1.092ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.916|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.24 secs
+ 
+--> 
+
+Total memory usage is 221684 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

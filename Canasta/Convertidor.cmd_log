@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Canasta -o C:/Users/Luis/Desktop/Proyecto/Canasta/Convertidor.tfi -lib work C:/Users/Luis/Desktop/Proyecto/Canasta//Convertidor.v -module Convertidor -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
