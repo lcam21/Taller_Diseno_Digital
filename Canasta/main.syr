@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.89 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.89 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: main.prj
 
@@ -749,10 +749,9 @@ Optimizing unit <vga_sync> ...
 
 Optimizing unit <MUX_RGB> ...
 WARNING:Xst:1293 - FF/Latch <UART/rx_clk_divider_12> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <mux_colores/RGB_temporal_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <mux_colores/RGB_temporal_1> <mux_colores/RGB_temporal_0> 
+INFO:Xst:2261 - The FF/Latch <mux_colores/RGB_temporal_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <mux_colores/RGB_temporal_0> 
 INFO:Xst:2261 - The FF/Latch <cubo3/posicion_x_5> in Unit <main> is equivalent to the following 5 FFs/Latches, which will be removed : <cubo3/posicion_x_4> <cubo3/posicion_x_3> <cubo3/posicion_x_2> <cubo3/posicion_x_1> <cubo3/posicion_x_0> 
-INFO:Xst:2261 - The FF/Latch <mux_colores/RGB_temporal_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <mux_colores/RGB_temporal_4> <mux_colores/RGB_temporal_3> 
-INFO:Xst:2261 - The FF/Latch <mux_colores/RGB_temporal_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <mux_colores/RGB_temporal_6> 
+INFO:Xst:2261 - The FF/Latch <mux_colores/RGB_temporal_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <mux_colores/RGB_temporal_3> 
 INFO:Xst:2261 - The FF/Latch <cubo4/posicion_x_5> in Unit <main> is equivalent to the following 5 FFs/Latches, which will be removed : <cubo4/posicion_x_4> <cubo4/posicion_x_3> <cubo4/posicion_x_2> <cubo4/posicion_x_1> <cubo4/posicion_x_0> 
 INFO:Xst:2261 - The FF/Latch <cubo2/posicion_x_5> in Unit <main> is equivalent to the following 5 FFs/Latches, which will be removed : <cubo2/posicion_x_4> <cubo2/posicion_x_3> <cubo2/posicion_x_2> <cubo2/posicion_x_1> <cubo2/posicion_x_0> 
 INFO:Xst:2261 - The FF/Latch <controlPosiciones/posicion_x_reg_5> in Unit <main> is equivalent to the following 5 FFs/Latches, which will be removed : <controlPosiciones/posicion_x_reg_4> <controlPosiciones/posicion_x_reg_3> <controlPosiciones/posicion_x_reg_2> <controlPosiciones/posicion_x_reg_1> <controlPosiciones/posicion_x_reg_0> 
@@ -769,8 +768,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 223
- Flip-Flops                                            : 223
+# Registers                                            : 226
+ Flip-Flops                                            : 226
 
 =========================================================================
 
@@ -793,12 +792,12 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 966
+# BELS                             : 969
 #      GND                         : 1
 #      INV                         : 27
 #      LUT1                        : 1
 #      LUT2                        : 77
-#      LUT3                        : 164
+#      LUT3                        : 167
 #      LUT4                        : 214
 #      LUT5                        : 78
 #      LUT6                        : 135
@@ -806,10 +805,10 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 73
-# FlipFlops/Latches                : 223
+# FlipFlops/Latches                : 226
 #      FD                          : 30
 #      FDE                         : 62
-#      FDR                         : 51
+#      FDR                         : 54
 #      FDRE                        : 78
 #      FDSE                        : 2
 # Clock Buffers                    : 1
@@ -825,15 +824,15 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             223  out of  18224     1%  
- Number of Slice LUTs:                  696  out of   9112     7%  
-    Number used as Logic:               696  out of   9112     7%  
+ Number of Slice Registers:             226  out of  18224     1%  
+ Number of Slice LUTs:                  699  out of   9112     7%  
+    Number used as Logic:               699  out of   9112     7%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    740
-   Number with an unused Flip Flop:     517  out of    740    69%  
-   Number with an unused LUT:            44  out of    740     5%  
-   Number of fully used LUT-FF pairs:   179  out of    740    24%  
+ Number of LUT Flip Flop pairs used:    743
+   Number with an unused Flip Flop:     517  out of    743    69%  
+   Number with an unused LUT:            44  out of    743     5%  
+   Number of fully used LUT-FF pairs:   182  out of    743    24%  
    Number of unique control sets:        35
 
 IO Utilization: 
@@ -864,7 +863,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 223   |
+clk                                | BUFGP                  | 226   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -875,9 +874,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 8.050ns (Maximum Frequency: 124.220MHz)
+   Minimum period: 8.088ns (Maximum Frequency: 123.645MHz)
    Minimum input arrival time before clock: 5.682ns
-   Maximum output required time after clock: 3.668ns
+   Maximum output required time after clock: 3.634ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -886,10 +885,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.050ns (frequency: 124.220MHz)
-  Total number of paths / destination ports: 45374 / 405
+  Clock period: 8.088ns (frequency: 123.645MHz)
+  Total number of paths / destination ports: 62228 / 411
 -------------------------------------------------------------------------
-Delay:               8.050ns (Levels of Logic = 8)
+Delay:               8.088ns (Levels of Logic = 8)
   Source:            cubo2/posicion_y_actual_4 (FF)
   Destination:       mux_colores/RGB_temporal_7 (FF)
   Source Clock:      clk rising
@@ -906,12 +905,12 @@ Delay:               8.050ns (Levels of Logic = 8)
      MUXCY:S->O            1   0.366   0.580  cubo2/Mcompar_GND_16_o_GND_16_o_LessThan_34_o_cy<4> (cubo2/GND_16_o_GND_16_o_LessThan_34_o)
      LUT5:I4->O            9   0.205   1.058  cubo2/pintar_cubo1_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy (estado_cubos<1>)
      LUT6:I3->O            1   0.205   0.808  color_final<0>1 (color_final<0>1)
-     LUT6:I3->O            1   0.205   0.580  color_final<0>4 (color_final<0>)
+     LUT6:I3->O            2   0.205   0.617  color_final<0>4 (color_final<0>)
      LUT3:I2->O            1   0.205   0.000  mux_colores/RGB_temporal_2_glue_set (mux_colores/RGB_temporal_2_glue_set)
      FDR:D                     0.102          mux_colores/RGB_temporal_2
     ----------------------------------------
-    Total                      8.050ns (2.348ns logic, 5.702ns route)
-                                       (29.2% logic, 70.8% route)
+    Total                      8.088ns (2.348ns logic, 5.740ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -938,20 +937,20 @@ Offset:              5.682ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
-Offset:              3.668ns (Levels of Logic = 1)
-  Source:            mux_colores/RGB_temporal_5 (FF)
-  Destination:       rgb<5> (PAD)
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            mux_colores/RGB_temporal_4 (FF)
+  Destination:       rgb<4> (PAD)
   Source Clock:      clk rising
 
-  Data Path: mux_colores/RGB_temporal_5 to rgb<5>
+  Data Path: mux_colores/RGB_temporal_4 to rgb<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.447   0.650  mux_colores/RGB_temporal_5 (mux_colores/RGB_temporal_5)
-     OBUF:I->O                 2.571          rgb_5_OBUF (rgb<5>)
+     FDR:C->Q              2   0.447   0.616  mux_colores/RGB_temporal_4 (mux_colores/RGB_temporal_4)
+     OBUF:I->O                 2.571          rgb_4_OBUF (rgb<4>)
     ----------------------------------------
-    Total                      3.668ns (3.018ns logic, 0.650ns route)
-                                       (82.3% logic, 17.7% route)
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
 
 =========================================================================
 
@@ -963,20 +962,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.050|         |         |         |
+clk            |    8.088|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.84 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.56 secs
  
 --> 
 
-Total memory usage is 352324 kilobytes
+Total memory usage is 352340 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   46 (   0 filtered)
-Number of infos    :   42 (   0 filtered)
+Number of infos    :   41 (   0 filtered)
 

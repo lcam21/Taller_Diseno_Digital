@@ -20,7 +20,7 @@ module MUX_RGB(
 					if(valores_cubos > 1'b0)
 						RGB_temporal <= color_cubo;
 					else if(canasta)
-						RGB_temporal <= 8'b00111111;
+						RGB_temporal <= 8'b10100100;
 					else 
 						RGB_temporal <= 8'b11111111;
 				end

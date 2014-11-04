@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LUIS::  Tue Nov 04 13:46:20 2014
+LUIS::  Tue Nov 04 14:13:49 2014
 
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 
@@ -26,26 +26,26 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   223 out of  18,224    1%
-    Number used as Flip Flops:                 223
+  Number of Slice Registers:                   226 out of  18,224    1%
+    Number used as Flip Flops:                 226
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        498 out of   9,112    5%
-    Number used as logic:                      498 out of   9,112    5%
-      Number using O6 output only:             254
+  Number of Slice LUTs:                        501 out of   9,112    5%
+    Number used as logic:                      501 out of   9,112    5%
+      Number using O6 output only:             257
       Number using O5 output only:               1
       Number using O5 and O6:                  243
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   178 out of   2,278    7%
+  Number of occupied Slices:                   182 out of   2,278    7%
   Number of MUXCYs used:                       284 out of   4,556    6%
-  Number of LUT Flip Flop pairs used:          510
-    Number with an unused Flip Flop:           303 out of     510   59%
-    Number with an unused LUT:                  12 out of     510    2%
-    Number of fully used LUT-FF pairs:         195 out of     510   38%
+  Number of LUT Flip Flop pairs used:          517
+    Number with an unused Flip Flop:           308 out of     517   59%
+    Number with an unused LUT:                  16 out of     517    3%
+    Number of fully used LUT-FF pairs:         193 out of     517   37%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -94,13 +94,13 @@ Finished initial Timing Analysis.  REAL time: 3 secs
 Starting Router
 
 
-Phase  1  : 2583 unrouted;      REAL time: 4 secs 
+Phase  1  : 2592 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 2245 unrouted;      REAL time: 4 secs 
+Phase  2  : 2253 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 797 unrouted;      REAL time: 5 secs 
+Phase  3  : 817 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 797 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 817 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Updating file: main.ncd with current fully routed design.
 
@@ -136,8 +136,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.134ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.416ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.329ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.418ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
