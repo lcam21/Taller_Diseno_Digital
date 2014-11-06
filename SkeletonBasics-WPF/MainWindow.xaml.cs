@@ -6,11 +6,13 @@
 
 namespace Microsoft.Samples.Kinect.SkeletonBasics
 {
+    using System;
     using System.IO;
     using System.Windows;
     using System.Windows.Media;
+    using System.IO.Ports;
     using Microsoft.Kinect;
-
+ 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -271,14 +273,10 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
             this.DrawBone(skeleton, drawingContext, JointType.ShoulderRight, JointType.ElbowRight);
             this.DrawBone(skeleton, drawingContext, JointType.ElbowRight, JointType.WristRight);
             this.DrawBone(skeleton, drawingContext, JointType.WristRight, JointType.HandRight);
+            
             float posicionX = skeleton.Joints[JointType.HandRight].Position.X;
-            if (posicionX < 0)
-            {
-                posicionX = 1+posicionX;
-                System.Console.WriteLine(posicionX * 320);
-            }
-            else
-                System.Console.WriteLine(320 + posicionX * 320);
+            enviar(posicionX);
+            
             // Left Leg
             this.DrawBone(skeleton, drawingContext, JointType.HipLeft, JointType.KneeLeft);
             this.DrawBone(skeleton, drawingContext, JointType.KneeLeft, JointType.AnkleLeft);
@@ -378,5 +376,28 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
                 }
             }
         }
-    }
+
+        private void enviar(float posicionX)
+        {
+            int number;
+            if (posicionX < 0)
+            {
+                if (posicionX <= -1)
+                    posicionX = -1;
+                posicionX = 1 + posicionX;
+                number = (int)(posicionX * 128);
+            }
+            else
+                number = (int)(128 + posicionX * 128);
+            if (number % 2 != 0)
+                number++;
+
+            if (number <= 254 && number >= 0)
+            {
+                Console.WriteLine(number);
+                Serial.enviarDatos(number);
+            }
+        }
+    }    
+    
 }
