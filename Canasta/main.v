@@ -7,6 +7,7 @@ module main(
 	input start,
 	input wire rx,
 	output hsync, vsync,
+	output led,
 	output [7:0] rgb
 	);
 
@@ -48,6 +49,13 @@ module main(
 	wire [0:7] rx_byte;
 	
 	wire pintar_canasta;
+	
+	wire [9:0] posicion_x_canasta;
+	wire [8:0] posicion_y_canasta;
+	
+	wire [4:0] pulsos_cubos_en_canasta;
+	
+	wire encender_led;
 	 
 	Canasta canasta (
 	 .clk(clk), 
@@ -55,7 +63,8 @@ module main(
 	 .pixel_x(pixel_x), 
 	 .pixel_y(pixel_y), 
 	 .pos_x_mano(pos_x_mano), 
-	 .pos_x_actual(), 
+	 .pos_x_actual(posicion_x_canasta), 
+	 .pos_y_actual(posicion_y_canasta),
 	 .pintar_canasta(pintar_canasta)
 	);
 
@@ -165,10 +174,13 @@ module main(
 		.color_cubo_in(color_nuevo_cubo),
 		.posicion_x_inicial_aleatoria(posicion_x_permitida),
 		.velocidad_cubo_in(velocidad_nuevo_cubo),
-		.posicion_y_actual(),
+		.pos_x_canasta(posicion_x_canasta),
+		.pos_y_canasta(posicion_y_canasta),
+		//.posicion_y_actual(),
 		.posicion_x_actual(posicion_x_c1),
-		.terminadoCubo(),
+		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_1),
+		.recogido_en_canasta(pulsos_cubos_en_canasta[0]),
 		.pintar_cubo(estado_cubos[0])
 	 );	
 	 
@@ -181,10 +193,13 @@ module main(
 		.color_cubo_in(color_nuevo_cubo),
 		.posicion_x_inicial_aleatoria(posicion_x_permitida),
 		.velocidad_cubo_in(velocidad_nuevo_cubo),
-		.posicion_y_actual(),
+		.pos_x_canasta(posicion_x_canasta),
+		.pos_y_canasta(posicion_y_canasta),
+		//.posicion_y_actual(),
 		.posicion_x_actual(posicion_x_c2),
-		.terminadoCubo(),
+		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_2),
+		.recogido_en_canasta(pulsos_cubos_en_canasta[1]),
 		.pintar_cubo(estado_cubos[1])
 	 );
 
@@ -198,10 +213,13 @@ module main(
 		.color_cubo_in(color_nuevo_cubo),
 		.posicion_x_inicial_aleatoria(posicion_x_permitida),
 		.velocidad_cubo_in(velocidad_nuevo_cubo),
-		.posicion_y_actual(),
+		.pos_x_canasta(posicion_x_canasta),
+		.pos_y_canasta(posicion_y_canasta),
+		//.posicion_y_actual(),
 		.posicion_x_actual(posicion_x_c3),
-		.terminadoCubo(),
+		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_3),
+		.recogido_en_canasta(pulsos_cubos_en_canasta[2]),
 		.pintar_cubo(estado_cubos[2])
 	 );
 
@@ -214,10 +232,13 @@ module main(
 		.color_cubo_in(color_nuevo_cubo),
 		.posicion_x_inicial_aleatoria(posicion_x_permitida),
 		.velocidad_cubo_in(velocidad_nuevo_cubo),
-		.posicion_y_actual(),
+		.pos_x_canasta(posicion_x_canasta),
+		.pos_y_canasta(posicion_y_canasta),
+		//.posicion_y_actual(),
 		.posicion_x_actual(posicion_x_c4),
-		.terminadoCubo(),
+		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_4),
+		.recogido_en_canasta(pulsos_cubos_en_canasta[3]),
 		.pintar_cubo(estado_cubos[3])
 	 );
 	 
@@ -230,10 +251,13 @@ module main(
 		.color_cubo_in(color_nuevo_cubo),
 		.posicion_x_inicial_aleatoria(posicion_x_permitida),
 		.velocidad_cubo_in(velocidad_nuevo_cubo),
-		.posicion_y_actual(),
+		.pos_x_canasta(posicion_x_canasta),
+		.pos_y_canasta(posicion_y_canasta),
+		//.posicion_y_actual(),
 		.posicion_x_actual(posicion_x_c5),
-		.terminadoCubo(),
+		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_5),
+		.recogido_en_canasta(pulsos_cubos_en_canasta[4]),
 		.pintar_cubo(estado_cubos[4])
 	 );	 
 	 
@@ -256,7 +280,19 @@ module main(
 		.rgb_salida(rgb)
 	);
 
-
+	registro_puntaje(
+			.clk(clk),
+			.reset(reset),
+			.pulsos_cubos_canasta(pulsos_cubos_en_canasta),
+			.pulso_sonido(encender_led)
+		 );
+		 
+	continuadorPeriodo(
+		.clk(clk),	 
+		.reset(reset),
+		.pulsoEntrada(encender_led),
+		.pulsoSalida(led)
+    );
 
 
 endmodule

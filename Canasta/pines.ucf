@@ -18,6 +18,8 @@ NET "rgb<7>"    	LOC = "T7";
 NET "hsync"       LOC = "N6";
 NET "vsync"       LOC = "P7";
 
+net "led"			loc = "V15";
+
 ## Usb-RS232 interface
 Net "rx" LOC = N17 | IOSTANDARD=LVCMOS33; #Bank = 1, pin name = IO_L48P_HDC_M1DQ8, Sch name = MCU-RX
 #Net "TxD" LOC = N18 | IOSTANDARD=LVCMOS33; #Bank = 1, pin name = IO_L48N_M1DQ9, Sch name = MCU-TX

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
 
@@ -105,39 +105,43 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\vga_sync.v" into library work
 Parsing module <vga_sync>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" into library work
 Parsing module <UART>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\timer.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\timer.v" into library work
 Parsing module <timer>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\selector_posicion_x.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\selector_posicion_x.v" into library work
 Parsing module <selector_posicion_x>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\seleccionador_color_cubo.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\seleccionador_color_cubo.v" into library work
 Parsing module <seleccionador_color_cubo>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\registro_siguiente_cubo.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\registro_siguiente_cubo.v" into library work
 Parsing module <registro_siguiente_cubo>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\MUX_RGB.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\registro_puntaje.v" into library work
+Parsing module <registro_puntaje>.
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\MUX_RGB.v" into library work
 Parsing module <MUX_RGB>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\LFSR.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\LFSR.v" into library work
 Parsing module <LFSR>.
 Parsing module <LFSR_3bits>.
 Parsing module <LFSR_5bits>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\habilitador_cubos.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\habilitador_cubos.v" into library work
 Parsing module <habilitador_cubos>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\deco_configuracion_cubos.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\deco_configuracion_cubos.v" into library work
 Parsing module <deco_configuracion_cubos>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\Cubo.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Cubo.v" into library work
 Parsing module <Cubo>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\Convertidor.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Convertidor.v" into library work
 Parsing module <Convertidor>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\control_posiciones.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_posiciones.v" into library work
 Parsing module <control_posiciones>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\control_cubos.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_cubos.v" into library work
 Parsing module <control_cubos>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\Canasta.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\continuadorPeriodo.v" into library work
+Parsing module <continuadorPeriodo>.
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Canasta.v" into library work
 Parsing module <Canasta>.
-Analyzing Verilog file "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" into library work
+Analyzing Verilog file "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" into library work
 Parsing module <main>.
 
 =========================================================================
@@ -149,77 +153,73 @@ Elaborating module <main>.
 Elaborating module <Canasta>.
 
 Elaborating module <UART>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 66: Result of 32-bit expression is truncated to fit in 13-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 69: Result of 32-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 109: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 110: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 118: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v" Line 124: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" Line 66: Result of 32-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" Line 69: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" Line 109: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" Line 110: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" Line 118: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v" Line 124: Result of 32-bit expression is truncated to fit in 3-bit target.
 
 Elaborating module <Convertidor>.
 
 Elaborating module <control_cubos>.
-WARNING:HDLCompiler:295 - "C:\Users\Luis\Desktop\Proyecto\Canasta\control_cubos.v" Line 63: case condition never applies
+WARNING:HDLCompiler:295 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_cubos.v" Line 63: case condition never applies
 
 Elaborating module <timer>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\timer.v" Line 44: Result of 31-bit expression is truncated to fit in 30-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\timer.v" Line 44: Result of 31-bit expression is truncated to fit in 30-bit target.
 
 Elaborating module <LFSR_5bits>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\LFSR.v" Line 90: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\LFSR.v" Line 90: Result of 6-bit expression is truncated to fit in 5-bit target.
 
 Elaborating module <selector_posicion_x>.
 
 Elaborating module <control_posiciones>.
 
 Elaborating module <registro_siguiente_cubo>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\registro_siguiente_cubo.v" Line 23: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\registro_siguiente_cubo.v" Line 23: Result of 6-bit expression is truncated to fit in 5-bit target.
 
 Elaborating module <habilitador_cubos>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\habilitador_cubos.v" Line 25: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\habilitador_cubos.v" Line 25: Result of 32-bit expression is truncated to fit in 5-bit target.
 
 Elaborating module <LFSR_3bits>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\LFSR.v" Line 61: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\LFSR.v" Line 61: Result of 4-bit expression is truncated to fit in 3-bit target.
 
 Elaborating module <deco_configuracion_cubos>.
 
 Elaborating module <vga_sync>.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" Line 50: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" Line 73: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\vga_sync.v" Line 50: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\vga_sync.v" Line 73: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\vga_sync.v" Line 83: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 Elaborating module <Cubo>.
 
 Elaborating module <seleccionador_color_cubo>.
 
 Elaborating module <MUX_RGB>.
+WARNING:HDLCompiler:604 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" Line 283: Module instantiation should have an instance name
+
+Elaborating module <registro_puntaje>.
+WARNING:HDLCompiler:604 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" Line 290: Module instantiation should have an instance name
+
+Elaborating module <continuadorPeriodo>.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\continuadorPeriodo.v" Line 39: Result of 26-bit expression is truncated to fit in 25-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <main>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v".
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 52: Output port <pos_x_actual> of the instance <canasta> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 63: Output port <received> of the instance <UART> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 63: Output port <is_receiving> of the instance <UART> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 63: Output port <recv_error> of the instance <UART> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 147: Output port <p_tick> of the instance <controlador_vga> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 159: Output port <posicion_y_actual> of the instance <cubo1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 159: Output port <terminadoCubo> of the instance <cubo1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 175: Output port <posicion_y_actual> of the instance <cubo2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 175: Output port <terminadoCubo> of the instance <cubo2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 192: Output port <posicion_y_actual> of the instance <cubo3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 192: Output port <terminadoCubo> of the instance <cubo3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 208: Output port <posicion_y_actual> of the instance <cubo4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 208: Output port <terminadoCubo> of the instance <cubo4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 224: Output port <posicion_y_actual> of the instance <cubo5> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Luis\Desktop\Proyecto\Canasta\main.v" line 224: Output port <terminadoCubo> of the instance <cubo5> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v".
+INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" line 72: Output port <received> of the instance <UART> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" line 72: Output port <is_receiving> of the instance <UART> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" line 72: Output port <recv_error> of the instance <UART> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\main.v" line 156: Output port <p_tick> of the instance <controlador_vga> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <main> synthesized.
 
 Synthesizing Unit <Canasta>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\Canasta.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Canasta.v".
     Found 10-bit register for signal <pos_x_actual>.
     Found 2-bit register for signal <E_ACTUAL>.
     Found finite state machine <FSM_0> for signal <E_ACTUAL>.
@@ -235,16 +235,16 @@ Synthesizing Unit <Canasta>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit subtractor for signal <pos_x_actual[9]_GND_2_o_sub_10_OUT> created at line 72.
-    Found 11-bit adder for signal <n0060> created at line 82.
-    Found 10-bit adder for signal <pos_x_actual[9]_GND_2_o_add_18_OUT> created at line 83.
-    Found 10-bit comparator greater for signal <pos_x_mano[9]_pos_x_actual[9]_LessThan_15_o> created at line 79
-    Found 10-bit comparator greater for signal <pos_x_actual[9]_pos_x_mano[9]_LessThan_16_o> created at line 82
-    Found 11-bit comparator greater for signal <BUS_0002_GND_2_o_LessThan_18_o> created at line 82
-    Found 10-bit comparator lessequal for signal <n0027> created at line 109
-    Found 11-bit comparator lessequal for signal <n0029> created at line 110
-    Found 10-bit comparator lessequal for signal <n0032> created at line 111
-    Found 10-bit comparator greater for signal <pixel_y[9]_GND_2_o_LessThan_38_o> created at line 111
+    Found 10-bit subtractor for signal <pos_x_actual[9]_GND_2_o_sub_10_OUT> created at line 75.
+    Found 11-bit adder for signal <n0062> created at line 85.
+    Found 10-bit adder for signal <pos_x_actual[9]_GND_2_o_add_18_OUT> created at line 86.
+    Found 10-bit comparator greater for signal <pos_x_mano[9]_pos_x_actual[9]_LessThan_15_o> created at line 82
+    Found 10-bit comparator greater for signal <pos_x_actual[9]_pos_x_mano[9]_LessThan_16_o> created at line 85
+    Found 11-bit comparator greater for signal <BUS_0002_GND_2_o_LessThan_18_o> created at line 85
+    Found 10-bit comparator lessequal for signal <n0028> created at line 114
+    Found 11-bit comparator lessequal for signal <n0030> created at line 115
+    Found 10-bit comparator lessequal for signal <n0033> created at line 116
+    Found 10-bit comparator greater for signal <pixel_y[9]_GND_2_o_LessThan_39_o> created at line 116
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  10 D-type flip-flop(s).
@@ -253,7 +253,7 @@ Synthesizing Unit <Canasta>.
 Unit <Canasta> synthesized.
 
 Synthesizing Unit <UART>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\UART.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\UART.v".
         CLOCK_DIVIDE = 2604
         RX_IDLE = 0
         RX_CHECK_START = 1
@@ -279,7 +279,7 @@ Synthesizing Unit <UART>.
 Unit <UART> synthesized.
 
 Synthesizing Unit <Convertidor>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\Convertidor.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Convertidor.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8x3-bit multiplier for signal <n0002> created at line 28.
     Summary:
@@ -287,7 +287,7 @@ WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and lef
 Unit <Convertidor> synthesized.
 
 Synthesizing Unit <control_cubos>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\control_cubos.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_cubos.v".
     Found 1-bit register for signal <activar_timer1_reg>.
     Found 2-bit register for signal <e_actual>.
     Found finite state machine <FSM_1> for signal <e_actual>.
@@ -310,7 +310,7 @@ Synthesizing Unit <control_cubos>.
 Unit <control_cubos> synthesized.
 
 Synthesizing Unit <timer>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\timer.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\timer.v".
         CANTIDAD_UNIDADES_TIEMPO = 1
         CANTIDAD_PULSOS_CUENTA = 50000000
     Found 30-bit register for signal <conteo>.
@@ -325,7 +325,7 @@ Synthesizing Unit <timer>.
 Unit <timer> synthesized.
 
 Synthesizing Unit <LFSR_5bits>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\LFSR.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\LFSR.v".
     Found 5-bit register for signal <out>.
     Found 5-bit adder for signal <out[4]_GND_8_o_add_2_OUT> created at line 90.
     Summary:
@@ -335,7 +335,7 @@ Synthesizing Unit <LFSR_5bits>.
 Unit <LFSR_5bits> synthesized.
 
 Synthesizing Unit <selector_posicion_x>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\selector_posicion_x.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\selector_posicion_x.v".
     Found 5-bit comparator lessequal for signal <n0000> created at line 11
     Found 5-bit comparator lessequal for signal <n0002> created at line 15
     Found 5-bit comparator lessequal for signal <n0004> created at line 15
@@ -359,7 +359,7 @@ Synthesizing Unit <selector_posicion_x>.
 Unit <selector_posicion_x> synthesized.
 
 Synthesizing Unit <control_posiciones>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\control_posiciones.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_posiciones.v".
     Found 9-bit register for signal <posicion_x_reg>.
     Found 2-bit register for signal <e_actual>.
     Found finite state machine <FSM_2> for signal <e_actual>.
@@ -387,7 +387,7 @@ Synthesizing Unit <control_posiciones>.
 Unit <control_posiciones> synthesized.
 
 Synthesizing Unit <registro_siguiente_cubo>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\registro_siguiente_cubo.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\registro_siguiente_cubo.v".
     Found 5-bit register for signal <cubos>.
     Summary:
 	inferred   5 D-type flip-flop(s).
@@ -395,13 +395,13 @@ Synthesizing Unit <registro_siguiente_cubo>.
 Unit <registro_siguiente_cubo> synthesized.
 
 Synthesizing Unit <habilitador_cubos>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\habilitador_cubos.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\habilitador_cubos.v".
     Summary:
 	inferred   2 Multiplexer(s).
 Unit <habilitador_cubos> synthesized.
 
 Synthesizing Unit <LFSR_3bits>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\LFSR.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\LFSR.v".
     Found 3-bit register for signal <out>.
     Found 3-bit adder for signal <out[2]_GND_13_o_add_2_OUT> created at line 61.
     Summary:
@@ -411,14 +411,14 @@ Synthesizing Unit <LFSR_3bits>.
 Unit <LFSR_3bits> synthesized.
 
 Synthesizing Unit <deco_configuracion_cubos>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\deco_configuracion_cubos.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\deco_configuracion_cubos.v".
     Found 8x10-bit Read Only RAM for signal <_n0013>
     Summary:
 	inferred   1 RAM(s).
 Unit <deco_configuracion_cubos> synthesized.
 
 Synthesizing Unit <vga_sync>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\vga_sync.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\vga_sync.v".
     Found 1-bit register for signal <bandera_cambiar_pulso>.
     Found 10-bit register for signal <v_count_reg>.
     Found 10-bit register for signal <h_count_reg>.
@@ -442,7 +442,7 @@ Synthesizing Unit <vga_sync>.
 Unit <vga_sync> synthesized.
 
 Synthesizing Unit <Cubo>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\Cubo.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Cubo.v".
     Found 2-bit register for signal <e_actual>.
     Found 9-bit register for signal <posicion_x>.
     Found 2-bit register for signal <velocidad_cubo>.
@@ -450,9 +450,9 @@ Synthesizing Unit <Cubo>.
     Found 9-bit register for signal <posicion_y_actual>.
     Found finite state machine <FSM_3> for signal <e_actual>.
     -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 5                                              |
-    | Inputs             | 2                                              |
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 7                                              |
     | Outputs            | 4                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | reset (positive)                               |
@@ -461,34 +461,58 @@ Synthesizing Unit <Cubo>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_33_OUT> created at line 121.
-    Found 9-bit adder for signal <posicion_y_actual[8]_GND_16_o_add_19_OUT> created at line 102.
-    Found 10-bit adder for signal <n0086> created at line 120.
-    Found 10-bit comparator lessequal for signal <n0029> created at line 119
-    Found 10-bit comparator lessequal for signal <n0032> created at line 120
-    Found 32-bit comparator lessequal for signal <n0036> created at line 121
-    Found 10-bit comparator lessequal for signal <n0039> created at line 122
+    Found 10-bit subtractor for signal <GND_16_o_GND_16_o_sub_43_OUT> created at line 139.
+    Found 9-bit adder for signal <posicion_y_actual[8]_GND_16_o_add_19_OUT> created at line 107.
+    Found 11-bit adder for signal <n0107> created at line 111.
+    Found 10-bit adder for signal <n0109> created at line 138.
+    Found 9-bit comparator greater for signal <pos_y_canasta[8]_posicion_y_actual[8]_LessThan_21_o> created at line 109
+    Found 10-bit comparator greater for signal <n0020> created at line 110
+    Found 11-bit comparator greater for signal <n0024> created at line 111
+    Found 10-bit comparator lessequal for signal <n0041> created at line 137
+    Found 10-bit comparator lessequal for signal <n0044> created at line 138
+    Found 32-bit comparator lessequal for signal <n0048> created at line 139
+    Found 10-bit comparator lessequal for signal <n0051> created at line 140
     Summary:
-	inferred   3 Adder/Subtractor(s).
+	inferred   4 Adder/Subtractor(s).
 	inferred  28 D-type flip-flop(s).
-	inferred   4 Comparator(s).
-	inferred   3 Multiplexer(s).
+	inferred   7 Comparator(s).
+	inferred   4 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <Cubo> synthesized.
 
 Synthesizing Unit <seleccionador_color_cubo>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\seleccionador_color_cubo.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\seleccionador_color_cubo.v".
     Summary:
 	no macro.
 Unit <seleccionador_color_cubo> synthesized.
 
 Synthesizing Unit <MUX_RGB>.
-    Related source file is "C:\Users\Luis\Desktop\Proyecto\Canasta\MUX_RGB.v".
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\MUX_RGB.v".
     Found 8-bit register for signal <RGB_temporal>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <MUX_RGB> synthesized.
+
+Synthesizing Unit <registro_puntaje>.
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\registro_puntaje.v".
+    Found 1-bit register for signal <pulso_sonido>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <registro_puntaje> synthesized.
+
+Synthesizing Unit <continuadorPeriodo>.
+    Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\continuadorPeriodo.v".
+        CICLOS_PARA_TIEMPO = 25000000
+        N_BITS = 25
+    Found 1-bit register for signal <pulsoParcial>.
+    Found 25-bit register for signal <conteoActual>.
+    Found 25-bit adder for signal <conteoActual[24]_GND_20_o_add_3_OUT> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <continuadorPeriodo> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -498,24 +522,26 @@ Macro Statistics
  8x10-bit single-port Read Only RAM                    : 1
 # Multipliers                                          : 1
  8x3-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 26
+# Adders/Subtractors                                   : 32
  1-bit adder                                           : 1
  10-bit adder                                          : 7
  10-bit addsub                                         : 1
  10-bit subtractor                                     : 5
- 11-bit adder                                          : 1
+ 11-bit adder                                          : 6
  13-bit subtractor                                     : 1
+ 25-bit adder                                          : 1
  3-bit adder                                           : 1
  30-bit adder                                          : 1
  4-bit subtractor                                      : 1
  5-bit adder                                           : 1
  6-bit subtractor                                      : 1
  9-bit adder                                           : 5
-# Registers                                            : 40
- 1-bit register                                        : 5
+# Registers                                            : 43
+ 1-bit register                                        : 7
  10-bit register                                       : 3
  13-bit register                                       : 1
  2-bit register                                        : 5
+ 25-bit register                                       : 1
  3-bit register                                        : 2
  30-bit register                                       : 2
  4-bit register                                        : 1
@@ -523,19 +549,21 @@ Macro Statistics
  6-bit register                                        : 1
  8-bit register                                        : 7
  9-bit register                                        : 11
-# Comparators                                          : 56
- 10-bit comparator greater                             : 5
+# Comparators                                          : 71
+ 10-bit comparator greater                             : 10
  10-bit comparator lessequal                           : 21
- 11-bit comparator greater                             : 1
+ 11-bit comparator greater                             : 6
  11-bit comparator lessequal                           : 1
  30-bit comparator equal                               : 1
  32-bit comparator lessequal                           : 5
  5-bit comparator lessequal                            : 17
  9-bit comparator equal                                : 5
-# Multiplexers                                         : 52
- 1-bit 2-to-1 multiplexer                              : 1
+ 9-bit comparator greater                              : 5
+# Multiplexers                                         : 62
+ 1-bit 2-to-1 multiplexer                              : 3
  10-bit 2-to-1 multiplexer                             : 2
  13-bit 2-to-1 multiplexer                             : 3
+ 25-bit 2-to-1 multiplexer                             : 3
  3-bit 2-to-1 multiplexer                              : 7
  3-bit 8-to-1 multiplexer                              : 1
  30-bit 2-to-1 multiplexer                             : 1
@@ -545,7 +573,7 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 5
  6-bit 7-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
- 9-bit 2-to-1 multiplexer                              : 23
+ 9-bit 2-to-1 multiplexer                              : 28
 # FSMs                                                 : 8
 # Xors                                                 : 2
  1-bit xor2                                            : 2
@@ -565,10 +593,6 @@ WARNING:Xst:2404 -  FFs/Latches <limite<29:26>> (without init value) have a cons
 Synthesizing (advanced) Unit <Canasta>.
 The following registers are absorbed into counter <pos_x_actual>: 1 register on signal <pos_x_actual>.
 Unit <Canasta> synthesized (advanced).
-
-Synthesizing (advanced) Unit <Cubo>.
-The following registers are absorbed into accumulator <posicion_y_actual>: 1 register on signal <posicion_y_actual>.
-Unit <Cubo> synthesized (advanced).
 
 Synthesizing (advanced) Unit <deco_configuracion_cubos>.
 INFO:Xst:3231 - The small RAM <Mram__n0013> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -602,36 +626,38 @@ Macro Statistics
  8x10-bit single-port distributed Read Only RAM        : 1
 # Multipliers                                          : 1
  8x3-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 16
+# Adders/Subtractors                                   : 27
  10-bit adder                                          : 5
  10-bit subtractor                                     : 5
- 11-bit adder                                          : 1
+ 11-bit adder                                          : 6
  13-bit subtractor                                     : 1
+ 25-bit adder                                          : 1
  3-bit adder                                           : 1
  4-bit subtractor                                      : 1
  5-bit adder                                           : 1
  6-bit subtractor                                      : 1
+ 9-bit adder                                           : 5
 # Counters                                             : 5
  1-bit up counter                                      : 1
  10-bit up counter                                     : 2
  10-bit updown counter                                 : 1
  30-bit up counter                                     : 1
-# Accumulators                                         : 5
- 9-bit up loadable accumulator                         : 5
-# Registers                                            : 189
- Flip-Flops                                            : 189
-# Comparators                                          : 56
- 10-bit comparator greater                             : 5
+# Registers                                            : 261
+ Flip-Flops                                            : 261
+# Comparators                                          : 71
+ 10-bit comparator greater                             : 10
  10-bit comparator lessequal                           : 21
- 11-bit comparator greater                             : 1
+ 11-bit comparator greater                             : 6
  11-bit comparator lessequal                           : 1
  30-bit comparator equal                               : 1
  32-bit comparator lessequal                           : 5
  5-bit comparator lessequal                            : 17
  9-bit comparator equal                                : 5
-# Multiplexers                                         : 48
- 1-bit 2-to-1 multiplexer                              : 6
+ 9-bit comparator greater                              : 5
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 8
  13-bit 2-to-1 multiplexer                             : 3
+ 25-bit 2-to-1 multiplexer                             : 3
  3-bit 2-to-1 multiplexer                              : 7
  3-bit 8-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 1
@@ -640,7 +666,7 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 4
  6-bit 7-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
- 9-bit 2-to-1 multiplexer                              : 18
+ 9-bit 2-to-1 multiplexer                              : 28
 # FSMs                                                 : 8
 # Xors                                                 : 2
  1-bit xor2                                            : 2
@@ -695,6 +721,7 @@ Optimizing FSM <FSM_3> on signal <e_actual[1:2]> with user encoding.
 -------------------
  00    | 00
  01    | 01
+ 11    | 11
  10    | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
@@ -715,21 +742,21 @@ Optimizing FSM <controlPosiciones/FSM_2> on signal <e_actual[1:2]> with user enc
  01    | 01
  10    | 10
 -------------------
-INFO:Xst:2261 - The FF/Latch <cubo1/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo1/color_cubo_1> <cubo1/color_cubo_0> 
-INFO:Xst:2261 - The FF/Latch <cubo2/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo2/color_cubo_6> 
-INFO:Xst:2261 - The FF/Latch <cubo1/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo1/color_cubo_4> <cubo1/color_cubo_3> 
-INFO:Xst:2261 - The FF/Latch <cubo4/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo4/color_cubo_1> <cubo4/color_cubo_0> 
-INFO:Xst:2261 - The FF/Latch <cubo1/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo1/color_cubo_6> 
-INFO:Xst:2261 - The FF/Latch <cubo4/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo4/color_cubo_4> <cubo4/color_cubo_3> 
 INFO:Xst:2261 - The FF/Latch <cubo3/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo3/color_cubo_1> <cubo3/color_cubo_0> 
-INFO:Xst:2261 - The FF/Latch <cubo4/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo4/color_cubo_6> 
 INFO:Xst:2261 - The FF/Latch <cubo3/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo3/color_cubo_4> <cubo3/color_cubo_3> 
-INFO:Xst:2261 - The FF/Latch <cubo3/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo3/color_cubo_6> 
-INFO:Xst:2261 - The FF/Latch <cubo5/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo5/color_cubo_1> <cubo5/color_cubo_0> 
-INFO:Xst:2261 - The FF/Latch <cubo5/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo5/color_cubo_4> <cubo5/color_cubo_3> 
-INFO:Xst:2261 - The FF/Latch <cubo5/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo5/color_cubo_6> 
 INFO:Xst:2261 - The FF/Latch <cubo2/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo2/color_cubo_1> <cubo2/color_cubo_0> 
+INFO:Xst:2261 - The FF/Latch <cubo3/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo3/color_cubo_6> 
 INFO:Xst:2261 - The FF/Latch <cubo2/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo2/color_cubo_4> <cubo2/color_cubo_3> 
+INFO:Xst:2261 - The FF/Latch <cubo5/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo5/color_cubo_1> <cubo5/color_cubo_0> 
+INFO:Xst:2261 - The FF/Latch <cubo2/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo2/color_cubo_6> 
+INFO:Xst:2261 - The FF/Latch <cubo5/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo5/color_cubo_4> <cubo5/color_cubo_3> 
+INFO:Xst:2261 - The FF/Latch <cubo4/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo4/color_cubo_1> <cubo4/color_cubo_0> 
+INFO:Xst:2261 - The FF/Latch <cubo5/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo5/color_cubo_6> 
+INFO:Xst:2261 - The FF/Latch <cubo4/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo4/color_cubo_4> <cubo4/color_cubo_3> 
+INFO:Xst:2261 - The FF/Latch <cubo4/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo4/color_cubo_6> 
+INFO:Xst:2261 - The FF/Latch <cubo1/color_cubo_2> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo1/color_cubo_1> <cubo1/color_cubo_0> 
+INFO:Xst:2261 - The FF/Latch <cubo1/color_cubo_5> in Unit <main> is equivalent to the following 2 FFs/Latches, which will be removed : <cubo1/color_cubo_4> <cubo1/color_cubo_3> 
+INFO:Xst:2261 - The FF/Latch <cubo1/color_cubo_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <cubo1/color_cubo_6> 
 
 Optimizing unit <main> ...
 
@@ -748,6 +775,8 @@ Optimizing unit <LFSR_3bits> ...
 Optimizing unit <vga_sync> ...
 
 Optimizing unit <MUX_RGB> ...
+
+Optimizing unit <continuadorPeriodo> ...
 WARNING:Xst:1293 - FF/Latch <UART/rx_clk_divider_12> has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <mux_colores/RGB_temporal_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <mux_colores/RGB_temporal_0> 
 INFO:Xst:2261 - The FF/Latch <cubo3/posicion_x_5> in Unit <main> is equivalent to the following 5 FFs/Latches, which will be removed : <cubo3/posicion_x_4> <cubo3/posicion_x_3> <cubo3/posicion_x_2> <cubo3/posicion_x_1> <cubo3/posicion_x_0> 
@@ -760,7 +789,13 @@ INFO:Xst:2261 - The FF/Latch <cubo5/posicion_x_5> in Unit <main> is equivalent t
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 13.
+FlipFlop canasta/pos_x_actual_0 has been replicated 1 time(s)
+FlipFlop canasta/pos_x_actual_1 has been replicated 1 time(s)
+FlipFlop canasta/pos_x_actual_2 has been replicated 1 time(s)
+FlipFlop canasta/pos_x_actual_3 has been replicated 1 time(s)
+FlipFlop canasta/pos_x_actual_4 has been replicated 1 time(s)
+FlipFlop canasta/pos_x_actual_5 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -768,8 +803,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 226
- Flip-Flops                                            : 226
+# Registers                                            : 259
+ Flip-Flops                                            : 259
 
 =========================================================================
 
@@ -792,30 +827,30 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 969
+# BELS                             : 1356
 #      GND                         : 1
-#      INV                         : 27
-#      LUT1                        : 1
-#      LUT2                        : 77
-#      LUT3                        : 167
-#      LUT4                        : 214
-#      LUT5                        : 78
-#      LUT6                        : 135
-#      MUXCY                       : 194
+#      INV                         : 36
+#      LUT1                        : 6
+#      LUT2                        : 122
+#      LUT3                        : 210
+#      LUT4                        : 278
+#      LUT5                        : 87
+#      LUT6                        : 234
+#      MUXCY                       : 282
 #      MUXF7                       : 1
 #      VCC                         : 1
-#      XORCY                       : 73
-# FlipFlops/Latches                : 226
-#      FD                          : 30
+#      XORCY                       : 98
+# FlipFlops/Latches                : 259
+#      FD                          : 55
 #      FDE                         : 62
-#      FDR                         : 54
-#      FDRE                        : 78
-#      FDSE                        : 2
+#      FDR                         : 56
+#      FDRE                        : 83
+#      FDSE                        : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 13
+# IO Buffers                       : 14
 #      IBUF                        : 3
-#      OBUF                        : 10
+#      OBUF                        : 11
 
 Device utilization summary:
 ---------------------------
@@ -824,20 +859,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             226  out of  18224     1%  
- Number of Slice LUTs:                  699  out of   9112     7%  
-    Number used as Logic:               699  out of   9112     7%  
+ Number of Slice Registers:             259  out of  18224     1%  
+ Number of Slice LUTs:                  973  out of   9112    10%  
+    Number used as Logic:               973  out of   9112    10%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    743
-   Number with an unused Flip Flop:     517  out of    743    69%  
-   Number with an unused LUT:            44  out of    743     5%  
-   Number of fully used LUT-FF pairs:   182  out of    743    24%  
-   Number of unique control sets:        35
+ Number of LUT Flip Flop pairs used:   1021
+   Number with an unused Flip Flop:     762  out of   1021    74%  
+   Number with an unused LUT:            48  out of   1021     4%  
+   Number of fully used LUT-FF pairs:   211  out of   1021    20%  
+   Number of unique control sets:        36
 
 IO Utilization: 
- Number of IOs:                          14
- Number of bonded IOBs:                  14  out of    232     6%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -863,7 +898,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 226   |
+clk                                | BUFGP                  | 259   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -874,9 +909,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 8.088ns (Maximum Frequency: 123.645MHz)
-   Minimum input arrival time before clock: 5.682ns
-   Maximum output required time after clock: 3.634ns
+   Minimum period: 7.908ns (Maximum Frequency: 126.461MHz)
+   Minimum input arrival time before clock: 7.825ns
+   Maximum output required time after clock: 4.267ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -885,72 +920,76 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.088ns (frequency: 123.645MHz)
-  Total number of paths / destination ports: 62228 / 411
+  Clock period: 7.908ns (frequency: 126.461MHz)
+  Total number of paths / destination ports: 85733 / 451
 -------------------------------------------------------------------------
-Delay:               8.088ns (Levels of Logic = 8)
-  Source:            cubo2/posicion_y_actual_4 (FF)
+Delay:               7.908ns (Levels of Logic = 8)
+  Source:            cubo3/posicion_y_actual_7 (FF)
   Destination:       mux_colores/RGB_temporal_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: cubo2/posicion_y_actual_4 to mux_colores/RGB_temporal_7
+  Data Path: cubo3/posicion_y_actual_7 to mux_colores/RGB_temporal_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.447   1.161  cubo2/posicion_y_actual_4 (cubo2/posicion_y_actual_4)
-     LUT3:I0->O            3   0.205   0.651  cubo2/Msub_GND_16_o_GND_16_o_sub_33_OUT_xor<5>111 (cubo2/Msub_GND_16_o_GND_16_o_sub_33_OUT_xor<5>11)
-     LUT5:I4->O            2   0.205   0.864  cubo2/Msub_GND_16_o_GND_16_o_sub_33_OUT_xor<9>11 (cubo2/GND_16_o_GND_16_o_sub_33_OUT<9>)
-     LUT4:I0->O            1   0.203   0.000  cubo2/Mcompar_GND_16_o_GND_16_o_LessThan_34_o_lut<4> (cubo2/Mcompar_GND_16_o_GND_16_o_LessThan_34_o_lut<4>)
-     MUXCY:S->O            1   0.366   0.580  cubo2/Mcompar_GND_16_o_GND_16_o_LessThan_34_o_cy<4> (cubo2/GND_16_o_GND_16_o_LessThan_34_o)
-     LUT5:I4->O            9   0.205   1.058  cubo2/pintar_cubo1_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy (estado_cubos<1>)
-     LUT6:I3->O            1   0.205   0.808  color_final<0>1 (color_final<0>1)
-     LUT6:I3->O            2   0.205   0.617  color_final<0>4 (color_final<0>)
-     LUT3:I2->O            1   0.205   0.000  mux_colores/RGB_temporal_2_glue_set (mux_colores/RGB_temporal_2_glue_set)
+     FDRE:C->Q            10   0.447   1.221  cubo3/posicion_y_actual_7 (cubo3/posicion_y_actual_7)
+     LUT6:I0->O            2   0.203   0.617  cubo3/Msub_GND_16_o_GND_16_o_sub_43_OUT_cy<7>11 (cubo3/Msub_GND_16_o_GND_16_o_sub_43_OUT_cy<7>)
+     LUT2:I1->O            2   0.205   0.864  cubo3/Msub_GND_16_o_GND_16_o_sub_43_OUT_xor<9>11 (cubo3/GND_16_o_GND_16_o_sub_43_OUT<9>)
+     LUT4:I0->O            1   0.203   0.000  cubo3/Mcompar_GND_16_o_GND_16_o_LessThan_44_o_lut<4> (cubo3/Mcompar_GND_16_o_GND_16_o_LessThan_44_o_lut<4>)
+     MUXCY:S->O            1   0.366   0.580  cubo3/Mcompar_GND_16_o_GND_16_o_LessThan_44_o_cy<4> (cubo3/GND_16_o_GND_16_o_LessThan_44_o)
+     LUT6:I5->O           12   0.205   1.013  cubo3/pintar_cubo1_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy (estado_cubos<2>)
+     LUT2:I0->O            3   0.203   0.651  color_final<0>6_SW0_SW0 (N539)
+     LUT6:I5->O            2   0.205   0.617  color_final<0>6_SW0 (N92)
+     LUT6:I5->O            1   0.205   0.000  mux_colores/RGB_temporal_2_glue_set (mux_colores/RGB_temporal_2_glue_set)
      FDR:D                     0.102          mux_colores/RGB_temporal_2
     ----------------------------------------
-    Total                      8.088ns (2.348ns logic, 5.740ns route)
-                                       (29.0% logic, 71.0% route)
+    Total                      7.908ns (2.344ns logic, 5.564ns route)
+                                       (29.6% logic, 70.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 254 / 198
+  Total number of paths / destination ports: 919 / 232
 -------------------------------------------------------------------------
-Offset:              5.682ns (Levels of Logic = 3)
+Offset:              7.825ns (Levels of Logic = 7)
   Source:            reset (PAD)
-  Destination:       cubo5/posicion_x_8 (FF)
+  Destination:       _i000002/pulsoParcial (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to cubo5/posicion_x_8
+  Data Path: reset to _i000002/pulsoParcial
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           147   1.222   2.229  reset_IBUF (reset_IBUF)
-     LUT3:I0->O            5   0.205   0.819  cubo1/_n0139_inv11 (cubo1/_n0139_inv1)
-     LUT6:I4->O            4   0.203   0.683  cubo1/_n0139_inv1 (cubo1/_n0139_inv)
-     FDE:CE                    0.322          cubo1/posicion_x_5
+     IBUF:I->O           206   1.222   2.283  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.205   0.000  _i000002/Madd_conteoActual[24]_GND_20_o_add_3_OUT_lut<0> (_i000002/Madd_conteoActual[24]_GND_20_o_add_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  _i000002/Madd_conteoActual[24]_GND_20_o_add_3_OUT_cy<0> (_i000002/Madd_conteoActual[24]_GND_20_o_add_3_OUT_cy<0>)
+     XORCY:CI->O           2   0.180   0.981  _i000002/Madd_conteoActual[24]_GND_20_o_add_3_OUT_xor<1> (_i000002/conteoActual[24]_GND_20_o_add_3_OUT<1>)
+     LUT6:I0->O            1   0.203   0.580  _i000002/_n0035<0>10_SW0 (N569)
+     LUT6:I5->O            1   0.205   0.580  _i000002/_n0035<0>10 (_i000002/_n0035<0>9)
+     LUT6:I5->O            1   0.205   0.579  _i000002/_n0035<0>15 (_i000002/_n0035)
+     FDR:R                     0.430          _i000002/pulsoParcial
     ----------------------------------------
-    Total                      5.682ns (1.952ns logic, 3.730ns route)
-                                       (34.4% logic, 65.6% route)
+    Total                      7.825ns (2.822ns logic, 5.003ns route)
+                                       (36.1% logic, 63.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 10 / 10
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
-  Source:            mux_colores/RGB_temporal_4 (FF)
-  Destination:       rgb<4> (PAD)
+Offset:              4.267ns (Levels of Logic = 1)
+  Source:            _i000002/pulsoParcial (FF)
+  Destination:       led (PAD)
   Source Clock:      clk rising
 
-  Data Path: mux_colores/RGB_temporal_4 to rgb<4>
+  Data Path: _i000002/pulsoParcial to led
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.616  mux_colores/RGB_temporal_4 (mux_colores/RGB_temporal_4)
-     OBUF:I->O                 2.571          rgb_4_OBUF (rgb<4>)
+     FDR:C->Q             29   0.447   1.249  _i000002/pulsoParcial (_i000002/pulsoParcial)
+     OBUF:I->O                 2.571          led_OBUF (led)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      4.267ns (3.018ns logic, 1.249ns route)
+                                       (70.7% logic, 29.3% route)
 
 =========================================================================
 
@@ -962,20 +1001,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.088|         |         |         |
+clk            |    7.908|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.56 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.63 secs
  
 --> 
 
-Total memory usage is 352340 kilobytes
+Total memory usage is 333240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   46 (   0 filtered)
-Number of infos    :   41 (   0 filtered)
+Number of warnings :   49 (   0 filtered)
+Number of infos    :   30 (   0 filtered)
 

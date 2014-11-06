@@ -9,10 +9,13 @@ module Cubo(
 	input [8:0] posicion_x_inicial_aleatoria,
 	input [1:0] velocidad_cubo_in,
 	input [7:0] color_cubo_in,
-	output reg [8:0] posicion_y_actual,
-	output terminadoCubo,
+	input [9:0] pos_x_canasta,
+	input [8:0] pos_y_canasta,
+	//output reg [8:0] posicion_y_actual,
+	//output terminadoCubo,
 	output [7:0] color_cubo_out,
 	output [8:0] posicion_x_actual,
+	output recogido_en_canasta,
 	output pintar_cubo
     );
 
@@ -26,7 +29,8 @@ module Cubo(
 	localparam 
 			E_SIN_MOVIMIENTO 			= 0,
 			E_EN_MOVIMIENTO 			= 1,
-			E_FINALIZADO_RECORRIDO 	= 2;
+			E_FINALIZADO_RECORRIDO 	= 2,
+			E_SUMA_DE_PUNTOS			= 3;
 
 	reg [1:0] e_actual, e_siguiente;
 	
@@ -37,6 +41,7 @@ module Cubo(
 	reg [1:0] velocidad_cubo_buffer;
 	reg [1:0] velocidad_cubo;
 	reg [8:0] posicion_y_siguiente;
+	reg [8:0] posicion_y_actual;
 	reg [7:0] color_cubo;
 	reg [7:0] color_cubo_buffer;
 	
@@ -91,16 +96,29 @@ module Cubo(
 				E_EN_MOVIMIENTO:
 					begin
 						if (posicion_y_actual == Max_Y)
-						begin
-							posicion_y_siguiente = 0;
-							//se saca de la pantalla
-							posicion_x_buffer = 0;
-							e_siguiente = E_FINALIZADO_RECORRIDO;
-						end
+							begin
+								posicion_y_siguiente = 0;
+								//se saca de la pantalla
+								posicion_x_buffer = 0;
+								e_siguiente = E_FINALIZADO_RECORRIDO;
+							end
 						else if (pulso_refrescar && habilitador_cubo)
-						begin
-							posicion_y_siguiente = posicion_y_actual + velocidad_cubo;
-						end
+							begin
+								posicion_y_siguiente = posicion_y_actual + velocidad_cubo;
+							end
+						else if((posicion_y_actual > pos_y_canasta) &&
+								  (pos_x_canasta <= posicion_x) &&
+								  ((pos_x_canasta + 79) >= (posicion_x + CUBO_SIZE)))
+							begin
+								posicion_y_siguiente = 0;
+								//se saca de la pantalla
+								posicion_x_buffer = 0;
+								e_siguiente = E_SUMA_DE_PUNTOS;
+							end						
+					end
+				E_SUMA_DE_PUNTOS:
+					begin
+						e_siguiente = E_SIN_MOVIMIENTO;
 					end
 				E_FINALIZADO_RECORRIDO:
 					begin
@@ -122,11 +140,14 @@ module Cubo(
 								(pixel_y <= posicion_y_actual) && habilitador_cubo; 
 	
 	//pulso que es alto cuando el cubo llega al fondo de la pantalla
-	assign terminadoCubo = (e_actual == E_FINALIZADO_RECORRIDO);
+	//assign terminadoCubo = (e_actual == E_FINALIZADO_RECORRIDO);
 	
 	assign color_cubo_out = color_cubo;
 	
 	assign posicion_x_actual = e_actual == E_EN_MOVIMIENTO ? posicion_x : 9'b1;
+	
+	assign recogido_en_canasta = e_actual == E_SUMA_DE_PUNTOS;
+	
 endmodule
 
 
