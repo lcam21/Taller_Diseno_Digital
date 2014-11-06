@@ -3,25 +3,55 @@
 module registro_puntaje(
     input clk,
     input reset,
-    input [4:0] pulsos_cubos_canasta,
+	 input start,
+	 input [1:0] puntos_c1,
+	 input [1:0] puntos_c2,
+	 input [1:0] puntos_c3,
+	 input [1:0] puntos_c4,
+	 input [1:0] puntos_c5,
+	 output reg [9:0] puntaje,
     output reg pulso_sonido
-    );
-
-	//reg [8:0] puntaje;
+    );	
 
 	always @(posedge clk)
 		begin
-			if(reset)
+			if(reset || start)
 				begin
-					//puntaje <= 0;
+					puntaje <= 0;
 					pulso_sonido <= 0;
 				end
 			else
 				begin
-					if(pulsos_cubos_canasta != 0)
-						pulso_sonido <= 1;
+					if(puntos_c1 != 0)
+						begin
+							pulso_sonido <= 1;
+							puntaje <= puntaje + puntos_c1;
+						end
+					else if(puntos_c2 != 0)
+						begin
+							pulso_sonido <= 1;
+							puntaje <= puntaje + puntos_c2;
+						end
+					else if(puntos_c3 != 0)
+						begin
+							pulso_sonido <= 1;
+							puntaje <= puntaje + puntos_c3;
+						end
+					else if(puntos_c4 != 0)
+						begin
+							pulso_sonido <= 1;
+							puntaje <= puntaje + puntos_c4;
+						end
+					else if(puntos_c5 != 0)
+						begin
+							pulso_sonido <= 1;
+							puntaje <= puntaje + puntos_c5;
+						end					
 					else
-						pulso_sonido <= 0;	
+						begin
+							pulso_sonido <= 0;
+							puntaje <= puntaje;
+						end
 				end
 		end
 

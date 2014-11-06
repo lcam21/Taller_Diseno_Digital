@@ -5,17 +5,15 @@ module control_cubos(
     input clk,
     input reset,
 	 input start, 
+	 input finalizado_tiempo_juego,
 	 output activar_timer1,
 	 output habilitar_cubos
     );
 
 	localparam		E_INICIO				= 0,
-						E_PRIMER_LAPSO 	= 1,
-						E_SEGUNDO_LAPSO	= 2,
-						E_TERCER_LAPSO 	= 3,
-						E_CUARTO_LAPSO 	= 4;
+						E_PRIMER_LAPSO 	= 1;
 						
-	reg [1:0] e_actual, e_siguiente;
+	reg e_actual, e_siguiente;
 	
 	reg activar_timer1_reg, activar_timer1_buff;
 	
@@ -49,19 +47,11 @@ module control_cubos(
 					end
 				
 				E_PRIMER_LAPSO:
-					begin						
-					end
-					
-				E_SEGUNDO_LAPSO:
-					begin
-					end
-				
-				E_TERCER_LAPSO:
-					begin
-					end
-				
-				E_CUARTO_LAPSO:
-					begin
+					begin	
+						if(finalizado_tiempo_juego)
+							begin
+								e_siguiente = E_INICIO;
+							end
 					end
 				
 				default:
@@ -71,33 +61,8 @@ module control_cubos(
 			endcase
 		end
 		
-		
-//	always @(*)
-//		begin
-//			activar_timer1_buff = 0;
-//			case(e_siguiente)
-//			
-//				E_PRIMER_LAPSO:
-//					begin
-//						activar_timer1_buff = 1;
-//					end
-//					
-//				E_SEGUNDO_LAPSO:
-//					begin
-//					end
-//				
-//				E_TERCER_LAPSO:
-//					begin
-//					end
-//				
-//				E_CUARTO_LAPSO:
-//					begin
-//					end
-//					
-//			endcase
-//		end
 
 	assign activar_timer1 = activar_timer1_reg;
-	assign habilitar_cubos = e_actual != E_INICIO;
+	assign habilitar_cubos = e_actual == E_PRIMER_LAPSO;
 
 endmodule

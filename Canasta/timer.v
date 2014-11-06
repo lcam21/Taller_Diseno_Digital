@@ -17,22 +17,23 @@ module timer(
 	 //en alto habilita una cuenta
 	 //input habilitado,
     input reset,
+	 input start,
     output pulsoTiempo
     );
 	
 	//cantidad de bits que se ocupan para llevar la cuenta
-	//parameter BITS_NECESARIOS = 4;
+	parameter BITS_NECESARIOS = 30;
 	parameter CANTIDAD_UNIDADES_TIEMPO = 1;
 	parameter CANTIDAD_PULSOS_CUENTA = 50000000; //medio segundo
 	
 	
-	reg [29:0] conteo;
-	reg [29:0] limite;
+	reg [BITS_NECESARIOS-1:0] conteo;
+	reg [BITS_NECESARIOS-1:0] limite;
 
 	
 	always @(posedge clk) 
 		 begin
-				if(reset)
+				if(reset || start)
 					begin					
 						limite <= CANTIDAD_UNIDADES_TIEMPO*CANTIDAD_PULSOS_CUENTA;
 						conteo <= 0;

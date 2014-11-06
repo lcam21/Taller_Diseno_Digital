@@ -8,6 +8,8 @@ module main(
 	input wire rx,
 	output hsync, vsync,
 	output led,
+	output [0:6] seg,
+	output [3:0] anodoSieteSeg,
 	output [7:0] rgb
 	);
 
@@ -38,6 +40,7 @@ module main(
 	wire pulso_habilitar_timer1;
 	wire pulso_habilitar_cubos;
 	wire tiempo_1_s_finalizado;
+	wire tiempo_60_s_finalizado;
 	
 	wire [8:0] posicion_x_c1;
 	wire [8:0] posicion_x_c2;
@@ -53,9 +56,15 @@ module main(
 	wire [9:0] posicion_x_canasta;
 	wire [8:0] posicion_y_canasta;
 	
-	wire [4:0] pulsos_cubos_en_canasta;
+	wire [1:0] puntos_c1;
+	wire [1:0] puntos_c2;
+	wire [1:0] puntos_c3;
+	wire [1:0] puntos_c4;
+	wire [1:0] puntos_c5;
 	
 	wire encender_led;
+	
+	wire [9:0] puntaje_juego;
 	 
 	Canasta canasta (
 	 .clk(clk), 
@@ -85,18 +94,31 @@ module main(
     .datoSalida(pos_x_mano)
     );
 	 
+	timer tiempo_60_s(	
+		.clk(clk),
+		.reset(reset),
+		.start(start),
+		.pulsoTiempo(tiempo_60_s_finalizado)
+    );
+	 
+	defparam tiempo_60_s.BITS_NECESARIOS = 33;
+	defparam tiempo_60_s.CANTIDAD_UNIDADES_TIEMPO = 60;
+	defparam tiempo_60_s.CANTIDAD_PULSOS_CUENTA = 100_000_000;
+	
+	 
 	control_cubos controlCubos(
 		.clk(clk),
 		.reset(reset),
 		.start(start), 
+		.finalizado_tiempo_juego(tiempo_60_s_finalizado),
 		.activar_timer1(pulso_habilitar_timer1),
 		.habilitar_cubos(pulso_habilitar_cubos)	
 	 );
 	
-	timer tiempo_1_s(	
+	timer tiempo_medio_s(	
 		.clk(clk),
-		.reset(pulso_habilitar_timer1),
-		//.habilitado(pulso_habilitar_timer1),
+		.reset(reset),		
+		.start(pulso_habilitar_timer1),		
 		.pulsoTiempo(tiempo_1_s_finalizado)
     );
 
@@ -180,7 +202,7 @@ module main(
 		.posicion_x_actual(posicion_x_c1),
 		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_1),
-		.recogido_en_canasta(pulsos_cubos_en_canasta[0]),
+		.puntos_en_canasta(puntos_c1),
 		.pintar_cubo(estado_cubos[0])
 	 );	
 	 
@@ -199,7 +221,7 @@ module main(
 		.posicion_x_actual(posicion_x_c2),
 		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_2),
-		.recogido_en_canasta(pulsos_cubos_en_canasta[1]),
+		.puntos_en_canasta(puntos_c2),
 		.pintar_cubo(estado_cubos[1])
 	 );
 
@@ -219,7 +241,7 @@ module main(
 		.posicion_x_actual(posicion_x_c3),
 		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_3),
-		.recogido_en_canasta(pulsos_cubos_en_canasta[2]),
+		.puntos_en_canasta(puntos_c3),
 		.pintar_cubo(estado_cubos[2])
 	 );
 
@@ -238,7 +260,7 @@ module main(
 		.posicion_x_actual(posicion_x_c4),
 		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_4),
-		.recogido_en_canasta(pulsos_cubos_en_canasta[3]),
+		.puntos_en_canasta(puntos_c4),
 		.pintar_cubo(estado_cubos[3])
 	 );
 	 
@@ -257,7 +279,7 @@ module main(
 		.posicion_x_actual(posicion_x_c5),
 		//.terminadoCubo(),
 		.color_cubo_out(color_cubo_5),
-		.recogido_en_canasta(pulsos_cubos_en_canasta[4]),
+		.puntos_en_canasta(puntos_c5),
 		.pintar_cubo(estado_cubos[4])
 	 );	 
 	 
@@ -283,7 +305,13 @@ module main(
 	registro_puntaje(
 			.clk(clk),
 			.reset(reset),
-			.pulsos_cubos_canasta(pulsos_cubos_en_canasta),
+			.start(start),
+			.puntos_c1(puntos_c1),
+			.puntos_c2(puntos_c2),
+			.puntos_c3(puntos_c3),
+			.puntos_c4(puntos_c4),
+			.puntos_c5(puntos_c5),
+			.puntaje(puntaje_juego),
 			.pulso_sonido(encender_led)
 		 );
 		 
@@ -294,5 +322,64 @@ module main(
 		.pulsoSalida(led)
     );
 
+	wire clkAtrasado;
+	//se instancia el retardador que genera pulsos cada 10ms
+	retardadorReloj retardadorCLK(
+		.clk(clk),
+		.clk_retardado(clkAtrasado)
+	);
+	
+	wire [3:0] unidades, decenas, centenas;
+	//instancia para transformar el numero en binario a BCD
+	 Bin_to_BCD bcd(
+		.numBin(puntaje_juego),
+		.centenas(centenas),
+		.decenas(decenas),
+		.unidades(unidades)
+	);
+	 
+	 wire [31:0] mensajeAscii;
+	 //transforma el BCD to ascii
+	 convertidorDecToHexAscii binToAscii(
+		.unidades(unidades),
+		.decenas(decenas),
+		.centenas(centenas),
+		.salidaHexAscii(mensajeAscii)
+    );
+	 
+	 wire [0:6] msjParte1, msjParte2, msjParte3, msjParte4;
+	 //interpretador de los msjs en ascii
+	 separadorMensajes separador(
+		.mensaje(mensajeAscii),
+		.parte_0(msjParte1),
+		.parte_1(msjParte2),
+		.parte_2(msjParte3),
+		.parte_3(msjParte4)
+    );
+	
+	wire [1:0] proximoDisplay;
+	//conmutador para rotar entre los display(anodos delos 7seg)
+	rotadorDisplays rotador(
+		.clk(clk),
+		.pulsoRotar(clkAtrasado),
+		.displayActual(proximoDisplay)
+	 );
+	 
+	 //deco que segun la posicion obtiene un display de los 4 7segmentos
+	 decoAnodosDisplay decoAnodos(
+		.posicion(proximoDisplay),
+		.punto(punto7Seg),
+		.anodo(anodoSieteSeg)
+    );
+	 
+	 //mux para elegir entre los 4-7segmentos
+	 MUX_MensajeActual muxMsjActual(
+		.msj_1(msjParte1),
+		.msj_2(msjParte2),
+		.msj_3(msjParte3),
+		.msj_4(msjParte4),
+		.seleccion(proximoDisplay),
+		.msj_seleccionado(seg)
+    );
 
 endmodule

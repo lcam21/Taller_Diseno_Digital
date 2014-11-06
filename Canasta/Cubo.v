@@ -15,7 +15,7 @@ module Cubo(
 	//output terminadoCubo,
 	output [7:0] color_cubo_out,
 	output [8:0] posicion_x_actual,
-	output recogido_en_canasta,
+	output [1:0] puntos_en_canasta,
 	output pintar_cubo
     );
 
@@ -146,7 +146,7 @@ module Cubo(
 	
 	assign posicion_x_actual = e_actual == E_EN_MOVIMIENTO ? posicion_x : 9'b1;
 	
-	assign recogido_en_canasta = e_actual == E_SUMA_DE_PUNTOS;
+	assign puntos_en_canasta = e_actual == E_SUMA_DE_PUNTOS ? velocidad_cubo : 0;
 	
 endmodule
 

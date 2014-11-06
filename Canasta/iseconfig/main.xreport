@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-06T14:03:47</DateModified>
+  <DateModified>2014-11-06T16:22:36</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/Canasta/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/Canasta</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Mauricio Paz/Documents/GitHub/Taller_Diseno_Digital/Canasta\</ImplementationReportsDirectory>
   <DateInitialized>2014-11-06T14:03:46</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
