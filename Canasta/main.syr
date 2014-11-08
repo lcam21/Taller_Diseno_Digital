@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
@@ -176,12 +176,12 @@ WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_
 
 Elaborating module <Convertidor>.
 
-Elaborating module <timer(BITS_NECESARIOS=33,CANTIDAD_UNIDADES_TIEMPO=60,CANTIDAD_PULSOS_CUENTA=100000000)>.
+Elaborating module <timer(BITS_NECESARIOS=33,CANTIDAD_UNIDADES_TIEMPO=60,CANTIDAD_PULSOS_CUENTA=110000000)>.
 
 Elaborating module <control_cubos>.
 
 Elaborating module <timer>.
-WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\timer.v" Line 45: Result of 31-bit expression is truncated to fit in 30-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\timer.v" Line 44: Result of 31-bit expression is truncated to fit in 30-bit target.
 
 Elaborating module <LFSR_5bits>.
 WARNING:HDLCompiler:413 - "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\LFSR.v" Line 90: Result of 6-bit expression is truncated to fit in 5-bit target.
@@ -316,7 +316,6 @@ Unit <UART> synthesized.
 
 Synthesizing Unit <Convertidor>.
     Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\Convertidor.v".
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8x3-bit multiplier for signal <n0002> created at line 28.
     Summary:
 	inferred   1 Multiplier(s).
@@ -326,11 +325,11 @@ Synthesizing Unit <timer_1>.
     Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\timer.v".
         BITS_NECESARIOS = 33
         CANTIDAD_UNIDADES_TIEMPO = 60
-        CANTIDAD_PULSOS_CUENTA = 100000000
+        CANTIDAD_PULSOS_CUENTA = 110000000
     Found 33-bit register for signal <conteo>.
     Found 33-bit register for signal <limite>.
-    Found 33-bit adder for signal <conteo[32]_GND_6_o_add_1_OUT> created at line 45.
-    Found 33-bit comparator equal for signal <pulsoTiempo> created at line 52
+    Found 33-bit adder for signal <conteo[32]_GND_6_o_add_1_OUT> created at line 44.
+    Found 33-bit comparator equal for signal <pulsoTiempo> created at line 50
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  66 D-type flip-flop(s).
@@ -341,10 +340,24 @@ Unit <timer_1> synthesized.
 Synthesizing Unit <control_cubos>.
     Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_cubos.v".
     Found 1-bit register for signal <activar_timer1_reg>.
-    Found 1-bit register for signal <habilitar_cubos>.
+    Found 2-bit register for signal <e_actual>.
+    Found finite state machine <FSM_1> for signal <e_actual>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Summary:
-	inferred   2 D-type flip-flop(s).
+	inferred   1 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <control_cubos> synthesized.
 
 Synthesizing Unit <timer>.
@@ -354,8 +367,8 @@ Synthesizing Unit <timer>.
         CANTIDAD_PULSOS_CUENTA = 50000000
     Found 30-bit register for signal <conteo>.
     Found 30-bit register for signal <limite>.
-    Found 30-bit adder for signal <conteo[29]_GND_8_o_add_1_OUT> created at line 45.
-    Found 30-bit comparator equal for signal <pulsoTiempo> created at line 52
+    Found 30-bit adder for signal <conteo[29]_GND_8_o_add_1_OUT> created at line 44.
+    Found 30-bit comparator equal for signal <pulsoTiempo> created at line 50
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  60 D-type flip-flop(s).
@@ -401,7 +414,7 @@ Synthesizing Unit <control_posiciones>.
     Related source file is "C:\Users\Mauricio Paz\Documents\GitHub\Taller_Diseno_Digital\Canasta\control_posiciones.v".
     Found 9-bit register for signal <posicion_x_reg>.
     Found 2-bit register for signal <e_actual>.
-    Found finite state machine <FSM_1> for signal <e_actual>.
+    Found finite state machine <FSM_2> for signal <e_actual>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 5                                              |
@@ -487,7 +500,7 @@ Synthesizing Unit <Cubo>.
     Found 2-bit register for signal <velocidad_cubo>.
     Found 8-bit register for signal <color_cubo>.
     Found 9-bit register for signal <posicion_y_actual>.
-    Found finite state machine <FSM_2> for signal <e_actual>.
+    Found finite state machine <FSM_3> for signal <e_actual>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
     | Transitions        | 11                                             |
@@ -669,8 +682,8 @@ Macro Statistics
  5-bit adder                                           : 1
  6-bit subtractor                                      : 1
  9-bit adder                                           : 5
-# Registers                                            : 50
- 1-bit register                                        : 9
+# Registers                                            : 49
+ 1-bit register                                        : 8
  10-bit register                                       : 4
  13-bit register                                       : 1
  2-bit register                                        : 6
@@ -713,7 +726,7 @@ Macro Statistics
  7-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
  9-bit 2-to-1 multiplexer                              : 28
-# FSMs                                                 : 7
+# FSMs                                                 : 8
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -724,15 +737,14 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <limite_10> in Unit <tiempo_60_s> is equivalent to the following 10 FFs/Latches, which will be removed : <limite_11> <limite_12> <limite_13> <limite_15> <limite_21> <limite_23> <limite_24> <limite_26> <limite_29> <limite_30> 
-INFO:Xst:2261 - The FF/Latch <limite_0> in Unit <tiempo_60_s> is equivalent to the following 21 FFs/Latches, which will be removed : <limite_1> <limite_2> <limite_3> <limite_4> <limite_5> <limite_6> <limite_7> <limite_8> <limite_9> <limite_14> <limite_16> <limite_17> <limite_18> <limite_19> <limite_20> <limite_22> <limite_25> <limite_27> <limite_28> <limite_31> <limite_32> 
+INFO:Xst:2261 - The FF/Latch <limite_9> in Unit <tiempo_60_s> is equivalent to the following 7 FFs/Latches, which will be removed : <limite_18> <limite_21> <limite_22> <limite_24> <limite_27> <limite_31> <limite_32> 
+INFO:Xst:2261 - The FF/Latch <limite_0> in Unit <tiempo_60_s> is equivalent to the following 24 FFs/Latches, which will be removed : <limite_1> <limite_2> <limite_3> <limite_4> <limite_5> <limite_6> <limite_7> <limite_8> <limite_10> <limite_11> <limite_12> <limite_13> <limite_14> <limite_15> <limite_16> <limite_17> <limite_19> <limite_20> <limite_23> <limite_25> <limite_26> <limite_28> <limite_29> <limite_30> 
 INFO:Xst:2261 - The FF/Latch <limite_7> in Unit <tiempo_medio_s> is equivalent to the following 11 FFs/Latches, which will be removed : <limite_12> <limite_13> <limite_14> <limite_15> <limite_17> <limite_19> <limite_20> <limite_21> <limite_22> <limite_23> <limite_25> 
 INFO:Xst:2261 - The FF/Latch <limite_0> in Unit <tiempo_medio_s> is equivalent to the following 17 FFs/Latches, which will be removed : <limite_1> <limite_2> <limite_3> <limite_4> <limite_5> <limite_6> <limite_8> <limite_9> <limite_10> <limite_11> <limite_16> <limite_18> <limite_24> <limite_26> <limite_27> <limite_28> <limite_29> 
 WARNING:Xst:1710 - FF/Latch <limite_0> (without init value) has a constant value of 0 in block <tiempo_60_s>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <limite_10> (without init value) has a constant value of 1 in block <tiempo_60_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <limite_9> (without init value) has a constant value of 1 in block <tiempo_60_s>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <limite_0> (without init value) has a constant value of 0 in block <tiempo_medio_s>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <limite_7> (without init value) has a constant value of 1 in block <tiempo_medio_s>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2404 -  FFs/Latches <limite<32:31>> (without init value) have a constant value of 0 in block <timer_1>.
 WARNING:Xst:2404 -  FFs/Latches <limite<29:26>> (without init value) have a constant value of 0 in block <timer>.
 
 Synthesizing (advanced) Unit <Canasta>.
@@ -850,8 +862,8 @@ Macro Statistics
  33-bit up counter                                     : 1
 # Accumulators                                         : 1
  10-bit up accumulator                                 : 1
-# Registers                                            : 294
- Flip-Flops                                            : 294
+# Registers                                            : 295
+ Flip-Flops                                            : 295
 # Comparators                                          : 84
  10-bit comparator greater                             : 10
  10-bit comparator lessequal                           : 21
@@ -880,7 +892,7 @@ Macro Statistics
  7-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
  9-bit 2-to-1 multiplexer                              : 28
-# FSMs                                                 : 7
+# FSMs                                                 : 8
 # Xors                                                 : 2
  1-bit xor2                                            : 2
 
@@ -889,37 +901,39 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <limite_30> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_29> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <limite_32> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_31> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_30> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_29> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_28> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_27> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_26> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_27> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_26> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_25> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_24> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_23> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_22> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_23> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_22> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_21> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_20> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_19> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_18> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_18> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_17> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_16> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_15> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_14> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_13> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_12> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_11> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_10> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_9> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_8> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_7> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_6> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_5> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_4> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_3> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_2> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_1> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_0> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_1> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_2> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_3> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_4> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_5> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_6> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_7> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_8> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_9> (without init value) has a constant value of 1 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_10> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_11> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_12> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_13> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_14> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_15> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_16> (without init value) has a constant value of 0 in block <timer_1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <limite_25> (without init value) has a constant value of 1 in block <timer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_24> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_23> (without init value) has a constant value of 1 in block <timer>. This FF/Latch will be trimmed during the optimization process.
@@ -947,11 +961,20 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_2> (without 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_1> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <limite_0> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_2> on signal <e_actual[1:2]> with user encoding.
-Optimizing FSM <FSM_2> on signal <e_actual[1:2]> with user encoding.
-Optimizing FSM <FSM_2> on signal <e_actual[1:2]> with user encoding.
-Optimizing FSM <FSM_2> on signal <e_actual[1:2]> with user encoding.
-Optimizing FSM <FSM_2> on signal <e_actual[1:2]> with user encoding.
+Optimizing FSM <FSM_1> on signal <e_actual[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_3> on signal <e_actual[1:2]> with user encoding.
+Optimizing FSM <FSM_3> on signal <e_actual[1:2]> with user encoding.
+Optimizing FSM <FSM_3> on signal <e_actual[1:2]> with user encoding.
+Optimizing FSM <FSM_3> on signal <e_actual[1:2]> with user encoding.
+Optimizing FSM <FSM_3> on signal <e_actual[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -970,7 +993,7 @@ Optimizing FSM <canasta/FSM_0> on signal <E_ACTUAL[1:2]> with user encoding.
  01    | 01
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <controlPosiciones/FSM_1> on signal <e_actual[1:2]> with user encoding.
+Optimizing FSM <controlPosiciones/FSM_2> on signal <e_actual[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -1050,8 +1073,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 323
- Flip-Flops                                            : 323
+# Registers                                            : 324
+ Flip-Flops                                            : 324
 
 =========================================================================
 
@@ -1074,23 +1097,23 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1602
+# BELS                             : 1603
 #      GND                         : 1
 #      INV                         : 39
 #      LUT1                        : 31
 #      LUT2                        : 121
 #      LUT3                        : 280
-#      LUT4                        : 254
+#      LUT4                        : 255
 #      LUT5                        : 159
 #      LUT6                        : 209
 #      MUXCY                       : 346
 #      MUXF7                       : 2
 #      VCC                         : 1
 #      XORCY                       : 159
-# FlipFlops/Latches                : 323
+# FlipFlops/Latches                : 324
 #      FD                          : 56
 #      FDE                         : 64
-#      FDR                         : 107
+#      FDR                         : 108
 #      FDRE                        : 93
 #      FDSE                        : 3
 # Clock Buffers                    : 1
@@ -1106,16 +1129,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             323  out of  18224     1%  
- Number of Slice LUTs:                 1093  out of   9112    11%  
-    Number used as Logic:              1093  out of   9112    11%  
+ Number of Slice Registers:             324  out of  18224     1%  
+ Number of Slice LUTs:                 1094  out of   9112    12%  
+    Number used as Logic:              1094  out of   9112    12%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1141
-   Number with an unused Flip Flop:     818  out of   1141    71%  
-   Number with an unused LUT:            48  out of   1141     4%  
-   Number of fully used LUT-FF pairs:   275  out of   1141    24%  
-   Number of unique control sets:        40
+ Number of LUT Flip Flop pairs used:   1142
+   Number with an unused Flip Flop:     818  out of   1142    71%  
+   Number with an unused LUT:            48  out of   1142     4%  
+   Number of fully used LUT-FF pairs:   276  out of   1142    24%  
+   Number of unique control sets:        42
 
 IO Utilization: 
  Number of IOs:                          26
@@ -1145,7 +1168,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 323   |
+clk                                | BUFGP                  | 324   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1168,7 +1191,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 7.998ns (frequency: 125.027MHz)
-  Total number of paths / destination ports: 105233 / 545
+  Total number of paths / destination ports: 105269 / 547
 -------------------------------------------------------------------------
 Delay:               7.998ns (Levels of Logic = 8)
   Source:            cubo1/posicion_y_actual_5 (FF)
@@ -1196,7 +1219,7 @@ Delay:               7.998ns (Levels of Logic = 8)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1076 / 309
+  Total number of paths / destination ports: 1077 / 310
 -------------------------------------------------------------------------
 Offset:              7.957ns (Levels of Logic = 8)
   Source:            reset (PAD)
@@ -1207,7 +1230,7 @@ Offset:              7.957ns (Levels of Logic = 8)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           213   1.222   2.285  reset_IBUF (reset_IBUF)
+     IBUF:I->O           214   1.222   2.285  reset_IBUF (reset_IBUF)
      LUT3:I0->O            1   0.205   0.000  _i000002/Madd_conteoActual[24]_GND_21_o_add_3_OUT_lut<0> (_i000002/Madd_conteoActual[24]_GND_21_o_add_3_OUT_lut<0>)
      MUXCY:S->O            1   0.172   0.000  _i000002/Madd_conteoActual[24]_GND_21_o_add_3_OUT_cy<0> (_i000002/Madd_conteoActual[24]_GND_21_o_add_3_OUT_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  _i000002/Madd_conteoActual[24]_GND_21_o_add_3_OUT_cy<1> (_i000002/Madd_conteoActual[24]_GND_21_o_add_3_OUT_cy<1>)
@@ -1266,12 +1289,12 @@ clk            |    7.998|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 36.00 secs
-Total CPU time to Xst completion: 35.07 secs
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.53 secs
  
 --> 
 
-Total memory usage is 365624 kilobytes
+Total memory usage is 353912 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   95 (   0 filtered)

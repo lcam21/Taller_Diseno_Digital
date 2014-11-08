@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Convertidor(
-		input clk,
+		//input clk,
 		input [7:0] datoEntrada,
 		output reg [9:0] datoSalida
     );

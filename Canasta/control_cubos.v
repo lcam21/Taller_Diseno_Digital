@@ -11,9 +11,10 @@ module control_cubos(
     );
 
 	localparam		E_INICIO				= 0,
-						E_PRIMER_LAPSO 	= 1;
+						E_PRIMER_LAPSO 	= 1,
+						E_FINAL				= 2;
 						
-	reg e_actual, e_siguiente;
+	reg [1:0] e_actual, e_siguiente;
 	
 	reg activar_timer1_reg, activar_timer1_buff;
 	
@@ -50,10 +51,13 @@ module control_cubos(
 					begin	
 						if(finalizado_tiempo_juego)
 							begin
-								e_siguiente = E_INICIO;
+								e_siguiente = E_FINAL;
 							end
 					end
-				
+				E_FINAL:
+					begin
+						e_siguiente = E_INICIO;
+					end				
 				default:
 					begin
 						e_siguiente = E_INICIO;

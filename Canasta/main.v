@@ -89,7 +89,7 @@ module main(
     );
 	 
 	 Convertidor Convertidor (
-    .clk(clk), 
+    //.clk(clk), 
     .datoEntrada(rx_byte), 
     .datoSalida(pos_x_mano)
     );
@@ -103,7 +103,7 @@ module main(
 	 
 	defparam tiempo_60_s.BITS_NECESARIOS = 33;
 	defparam tiempo_60_s.CANTIDAD_UNIDADES_TIEMPO = 60;
-	defparam tiempo_60_s.CANTIDAD_PULSOS_CUENTA = 100_000_000;
+	defparam tiempo_60_s.CANTIDAD_PULSOS_CUENTA = 110_000_000;
 	
 	 
 	control_cubos controlCubos(

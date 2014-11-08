@@ -40,12 +40,10 @@ module timer(
 					end
 				else 
 					begin
-						//if(habilitado)
-							//begin
-								conteo <= conteo + 1; // cuente
-								if(conteo == limite)
-									conteo <= 0;
-							//end
+						limite <= limite;
+						conteo <= conteo + 1;
+						if(conteo == limite)
+							conteo <= 0;				
 					end
 		  end
 
