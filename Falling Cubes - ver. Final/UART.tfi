@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+UART instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .rx(rx), 
+    .received(received), 
+    .rx_byte(rx_byte), 
+    .is_receiving(is_receiving), 
+    .recv_error(recv_error)
+    );
+
+

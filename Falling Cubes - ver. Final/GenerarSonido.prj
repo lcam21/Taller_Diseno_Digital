@@ -1,0 +1,7 @@
+verilog work "sc_lut.v"
+verilog work "sine.v"
+verilog work "clkgen.v"
+verilog work "i2s_out.v"
+verilog work "audiogen.v"
+verilog work "i2s_tst.v"
+verilog work "GenerarSonido.v"

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Fri Nov 07 14:19:18 2014
+# Process ID: 3996
+# Log file: C:/Users/Kevin/Desktop/Taller_Diseno_Digital-master/Canasta/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Kevin/Desktop/Taller_Diseno_Digital-master/Canasta/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Kevin/Desktop/Taller_Diseno_Digital-master/Canasta/pa.fromNetlist.tcl

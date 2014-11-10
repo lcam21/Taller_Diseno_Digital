@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Canasta -o C:/Users/Luis/Desktop/Proyecto/Canasta/UART.tfi -lib work C:/Users/Luis/Desktop/Proyecto/Canasta//UART.v -module UART -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

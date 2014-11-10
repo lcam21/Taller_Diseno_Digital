@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Convertidor instance_name (
+    .clk(clk), 
+    .datoEntrada(datoEntrada), 
+    .datoSalida(datoSalida)
+    );
+
+

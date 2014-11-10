@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Kevin\Desktop\Taller_Diseno_Digital-master\Canasta\main.ncd
+OUTFILE=C:\Users\Kevin\Desktop\Taller_Diseno_Digital-master\Canasta\main.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Kevin\Desktop\Taller_Diseno_Digital-master\Canasta
+LICENSE=WebPack
+USER_INFO=210920907_0_0_211

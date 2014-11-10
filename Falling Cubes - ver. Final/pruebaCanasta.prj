@@ -1,0 +1,6 @@
+verilog work "vga_sync.v"
+verilog work "UART.v"
+verilog work "MUX_RGB.v"
+verilog work "Convertidor.v"
+verilog work "Canasta.v"
+verilog work "pruebaCanasta.v"
